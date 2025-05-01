@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-i18n-title="home.title">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطور ويب | السيرة الذاتية</title>
+
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;900&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <link href="./src/output.css" rel="stylesheet">
+   <link href="./dist/output.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/css/styles.css">
+   <link rel="stylesheet" href="./src/css/dark-mode.css">
+   <link rel="stylesheet" href="./src/css/navbar.css">
+   <link rel="stylesheet" href="./src/css/space-effects.css">
+    <!-- مكتبات الرسوم المتحركة -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="overflow-x-hidden text-white bg-space-primary">
+    <!-- شريط التنقل -->
+    <nav class="space-navbar transparent">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-rocket logo-icon"></i>
+                <span class="logo-text" data-i18n="common.nav.home">الرئيسية</span>
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="#home" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
+                <li><a href="#about" data-i18n="common.nav.about">نبذة عني</a></li>
+                <li><a href="#skills" data-i18n="common.nav.skills">المهارات</a></li>
+                <li><a href="#experience" data-i18n="common.nav.experience">الخبرات</a></li>
+                <li><a href="projects.html" data-i18n="common.nav.projects">المشاريع</a></li>
+                <li><a href="contact.html" data-i18n="common.nav.contact">تواصل معي</a></li>
+            </ul>
+
+            <div class="navbar-toggles">
+                <button id="language-toggle" class="toggle-btn" data-lang="en">
+                    <i class="fas fa-language"></i>
+                    <span data-i18n="common.language.en">English</span>
+                </button>
+
+                <button id="theme-toggle" class="toggle-btn">
+                    <i class="fas fa-moon"></i>
+                    <span data-i18n="common.theme.dark">وضع الليل</span>
+                </button>
+            </div>
+
+            <button class="navbar-menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- القائمة المنسدلة للشاشات الصغيرة -->
+    <div class="navbar-mobile-menu">
+        <ul class="navbar-mobile-links">
+            <li><a href="#home" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
+            <li><a href="#about" data-i18n="common.nav.about">نبذة عني</a></li>
+            <li><a href="#skills" data-i18n="common.nav.skills">المهارات</a></li>
+            <li><a href="#experience" data-i18n="common.nav.experience">الخبرات</a></li>
+            <li><a href="projects.html" data-i18n="common.nav.projects">المشاريع</a></li>
+            <li><a href="contact.html" data-i18n="common.nav.contact">تواصل معي</a></li>
+        </ul>
+
+        <div class="navbar-mobile-toggles">
+            <button id="mobile-language-toggle" class="toggle-btn" data-lang="en">
+                <i class="fas fa-language"></i>
+                <span data-i18n="common.language.en">English</span>
+            </button>
+
+            <button id="mobile-theme-toggle" class="toggle-btn">
+                <i class="fas fa-moon"></i>
+                <span data-i18n="common.theme.dark">وضع الليل</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- قسم الرئيسية -->
+    <section id="home" class="relative overflow-hidden hero-section">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+
+        <!-- كوكب متحرك -->
+        <div
+            class="absolute w-32 h-32 rounded-full top-1/4 right-10 bg-space-accent-1 opacity-30 animate-pulse-slow planet-effect">
+        </div>
+
+        <!-- مجرة متحركة -->
+        <div
+            class="absolute w-64 h-64 rounded-full bottom-1/4 left-10 bg-space-accent-2 opacity-10 animate-spin-slow galaxy-effect">
+        </div>
+
+        <div class="container relative z-10 px-4 py-20 mx-auto">
+            <div class="flex flex-col-reverse items-center justify-between md:flex-row">
+                <div class="mt-10 hero-content md:mt-0 md:w-1/2">
+                    <h1 class="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl font-orbitron" data-aos="fade-up"
+                        data-i18n="home.hero.greeting">مرحباً، أنا</h1>
+                    <h2 class="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-orbitron text-space-accent-2"
+                        data-aos="fade-up" data-aos-delay="100" data-i18n="home.hero.name"> محمد بندر</h2>
+                    <p class="mb-6 text-xl font-medium md:text-2xl" data-aos="fade-up" data-aos-delay="200"
+                        data-i18n="home.hero.profession">مطور ويب متكامل</p>
+                    <p class="max-w-lg mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="300"
+                        data-i18n="home.hero.description">
+                        متخصص في تطوير مواقع الويب الحديثة والتطبيقات التفاعلية باستخدام أحدث التقنيات والأدوات.
+                    </p>
+                    <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#contact" class="btn-primary">
+                            <i class="mr-2 fas fa-paper-plane"></i>
+                            <span data-i18n="home.hero.buttons.contact">تواصل معي</span>
+                        </a>
+                        <a href="#projects" class="btn-outline">
+                            <i class="mr-2 fas fa-eye"></i>
+                            <span data-i18n="home.hero.buttons.viewmyworkers">مشاهدة أعمالي</span>
+                        </a>
+                    </div>
+
+                    <div class="flex items-center mt-8 space-x-4 rtl-active">
+                        <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                            <i class="text-xl fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                            <i class="text-xl fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                            <i class="text-xl fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                            <i class="text-xl fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image" data-aos="zoom-in">
+                    <img src="./assets/images/me.jpg" alt="صورة شخصية"
+                        class="object-cover w-64 h-64 md:w-80 md:h-80">
+                </div>
+            </div>
+        </div>
+
+        <!-- موجة متحركة في الأسفل -->
+        <div class="absolute bottom-0 left-0 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full">
+                <path fill="#1a237e" fill-opacity="1"
+                    d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,197.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- قسم نبذة عني -->
+    <section id="about" class="relative py-20 overflow-hidden bg-space-secondary">
+        <!-- خلفية الضباب الكوني -->
+        <div class="absolute inset-0 z-0 cosmic-fog"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="flex flex-col items-center gap-12 md:flex-row">
+                <div class="md:w-2/5" data-aos="fade-right">
+                    <div class="relative">
+                        <img src="./assets/images/me.jpg" alt="صورة شخصية"
+                            class="w-full max-w-md mx-auto rounded-lg shadow-xl">
+                        <div
+                            class="absolute w-24 h-24 rounded-full -top-4 -right-4 bg-space-accent-1 opacity-20 animate-pulse-slow">
+                        </div>
+                        <div
+                            class="absolute w-32 h-32 rounded-full -bottom-4 -left-4 bg-space-accent-2 opacity-20 animate-pulse-slow">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-3/5" data-aos="fade-left">
+                    <h2 class="mb-6 text-3xl font-bold font-orbitron section-title" data-i18n="home.about.title">نبذة
+                        عني</h2>
+                    <p class="mb-6 text-gray-300" data-i18n="home.about.description1">
+                        أنا مطور ويب متكامل مع أكثر من 5 سنوات من الخبرة في تطوير مواقع الويب والتطبيقات التفاعلية.
+                        أتخصص في تطوير واجهات المستخدم الجذابة والمتجاوبة باستخدام أحدث التقنيات والأدوات.
+                    </p>
+                    <p class="mb-6 text-gray-300" data-i18n="home.about.description2">
+                        أسعى دائمًا لتقديم حلول مبتكرة وعالية الجودة تلبي احتياجات العملاء وتتجاوز توقعاتهم. أؤمن بأهمية
+                        التعلم المستمر ومواكبة أحدث التطورات في مجال تطوير الويب.
+                    </p>
+
+                    <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20">
+                                <i class="fas fa-user-graduate text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold" data-i18n="home.about.education.title">التعليم</h3>
+                                <p class="text-gray-300" data-i18n="home.about.education.value">بكالوريوس علوم الحاسب</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20">
+                                <i class="fas fa-briefcase text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold" data-i18n="home.about.experience.title">الخبرة</h3>
+                                <p class="text-gray-300" data-i18n="home.about.experience.value">+5 سنوات</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20">
+                                <i class="fas fa-map-marker-alt text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold" data-i18n="home.about.location.title">الموقع</h3>
+                                <p class="text-gray-300" data-i18n="home.about.location.value">الرياض، السعودية</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20">
+                                <i class="fas fa-language text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold" data-i18n="home.about.languages.title">اللغات</h3>
+                                <p class="text-gray-300" data-i18n="home.about.languages.value">العربية، الإنجليزية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#" class="btn-primary" data-i18n="home.about.download_cv">تحميل السيرة الذاتية</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المهارات -->
+    <section id="skills" class="relative py-20 overflow-hidden bg-space-primary">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="home.skills.title">مهاراتي
+                </h2>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="home.skills.subtitle">
+                    مجموعة من المهارات التقنية والأدوات التي أتقنها وأستخدمها في مشاريعي
+                </p>
+            </div>
+
+            <!-- <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              
+                <div class="p-6 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 skill-icon">
+                            <i class="text-xl fas fa-code text-space-accent-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold" data-i18n="home.skills.frontend.title">تطوير الواجهة الأمامية</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="home.skills.frontend.html">HTML5</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="95"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.frontend.css">CSS3 / SASS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.frontend.javascript">JavaScript / TypeScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.frontend.react">React.js</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.frontend.vue">Vue.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+                <div class="p-6 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 skill-icon">
+                            <i class="text-xl fas fa-server text-space-accent-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold" data-i18n="home.skills.backend.title">تطوير الواجهة الخلفية</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.backend.node">Node.js / Express</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="85"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.backend.php">PHP / Laravel</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="75"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.backend.python">Python / Django</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="70"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.backend.mysql">MySQL / PostgreSQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="80"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.backend.mongodb">MongoDB</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+          
+                <div class="p-6 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 skill-icon">
+                            <i class="text-xl fas fa-tools text-space-accent-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold" data-i18n="home.skills.tools.title">مهارات أخرى</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.tools.git">Git / GitHub</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="90"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.tools.docker">Docker</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="70"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.tools.aws">AWS / Azure</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="65"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.tools.figma">Figma / Adobe XD</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="75"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span data-i18n="skills.tools.responsive"> Responsive Design</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-bar" data-width="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- أدوات وتقنيات -->
+            <div class="mt-10" data-aos="fade-up">
+                <!-- <h3 class="mb-8 text-2xl font-bold text-center font-orbitron" data-i18n="home.skills.tools.superTitle">الأدوات
+                    والتقنيات</h3> -->
+
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div
+                    class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                    <i class="mb-2 text-3xl fab fa-html5 text-space-accent-2"></i>
+                    <span class="text-sm">HTML5</span>
+                </div>
+                <div
+                class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                <i class="mb-2 text-3xl fab fa-css3-alt text-space-accent-2"></i>
+                <span class="text-sm">CSS3</span>
+            </div>  <div
+            class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+            <i class="mb-2 text-3xl fab fa-js text-space-accent-2"></i>
+            <span class="text-sm">JavaScript</span>
+        </div>
+        <div
+        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+        <i class="mb-2 text-3xl fas fa-database text-space-accent-2"></i>
+        <span class="text-sm">MySql</span>
+    </div>
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fab fa-react text-space-accent-2"></i>
+                        <span class="text-sm">React</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fab fa-vuejs text-space-accent-2"></i>
+                        <span class="text-sm">Vue.js</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fas fa-wind text-space-accent-2"></i>
+                        <span class="text-sm">TailwindCss</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fas fa-box-open text-space-accent-2"></i>
+                        <span class="text-sm">Livewire</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fab fa-php text-space-accent-2"></i>
+                        <span class="text-sm">PHP</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fab fa-laravel text-space-accent-2"></i>
+                        <span class="text-sm">Laravel</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fas fa-palette text-space-accent-2"></i>
+                        <span class="text-sm">Filament</span>
+                    </div>
+
+                    <div
+                        class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                        <i class="mb-2 text-3xl fab fa-aws text-space-accent-2"></i>
+                        <span class="text-sm">AWS</span>
+                    </div>
+                    <div
+                    class="flex flex-col items-center w-24 p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 skill-card">
+                    <i class="mb-2 text-3xl fab fa-adobe text-space-accent-2"></i>
+                    <span class="text-sm">Adobe XD</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخبرات -->
+    <section id="experience" class="relative py-20 overflow-hidden bg-space-secondary">
+        <!-- خلفية الضباب الكوني -->
+        <div class="absolute inset-0 z-0 cosmic-fog"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="home.experience.title">خبراتي
+                </h2>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="home.experience.subtitle">
+                    مسيرتي المهنية في مجال تطوير الويب والبرمجة
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+                <!-- الخبرات العملية -->
+                <div data-aos="fade-right">
+                    <h3 class="mb-8 text-2xl font-bold font-orbitron" data-i18n="home.experience.experience_title">الخبرات العملية
+                    </h3>
+
+                    <div class="experience-timeline">
+                        <!-- وظيفة 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.jobs.job1.title"> 
+                                         </h4>
+                                    <span class="text-space-accent-2" data-i18n="home.experience.jobs.job1.period"></span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.jobs.job1.company">
+                                </h5>
+                                <p class="text-gray-300" data-i18n="home.experience.jobs.job1.achievements">
+
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">HTML</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">JavaScript</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">React</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Vuejs</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">php</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">css3</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TailWind css</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySQL</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- وظيفة 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.jobs.job2.title">مطور ويب متكامل
+                                    </h4>
+                                    <span class="text-space-accent-2" data-i18n="home.experience.jobs.job2.period">2019 -
+                                        2021</span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.jobs.job2.company">شركة الإبداع الرقمي
+                                </h5>
+                                <p class="text-gray-300" data-i18n="home.experience.jobs.job2.achievements">
+                                    تطوير مواقع ويب وتطبيقات متكاملة باستخدام Vue.js و Laravel. تصميم وتنفيذ قواعد
+                                    البيانات وواجهات برمجة التطبيقات.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">HTML</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">JavaScript</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">React</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Vuejs</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">php</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">css3</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TailWind css</span>
+                                        <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySQL</span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- وظيفة 3 -->
+                        <!-- <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.jobs.job3.title">مطور واجهة
+                                        أمامية</h4>
+                                    <span class="text-space-accent-2" data-i18n="home.experience.jobs.job3.date">2017 -
+                                        2019</span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.jobs.job3.company">شركة الحلول التقنية
+                                </h5>
+                                <p class="text-gray-300" data-i18n="home.experience.jobs.job3.description">
+                                    تطوير واجهات مستخدم تفاعلية باستخدام HTML و CSS و JavaScript. تحسين تجربة المستخدم
+                                    وضمان توافق المواقع مع مختلف المتصفحات.
+                                </p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">HTML5</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">CSS3</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">JavaScript</span>
+                                    <span
+                                        class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">jQuery</span>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+
+                <!-- التعليم والشهادات -->
+                <div data-aos="fade-left">
+                    <h3 class="mb-8 text-2xl font-bold font-orbitron" data-i18n="home.experience.EducationCertificates_title">التعليم
+                        والشهادات</h3>
+
+                    <div class="experience-timeline">
+                        <!-- تعليم 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.education.edu1.title"></h4>
+                                    <span class="text-space-accent-2" data-i18n="home.experience.education.edu1.date">
+                                        </span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.education.edu1.institution"> 
+                                    </h5>
+                                <p class="text-gray-300" data-i18n="home.experience.education.edu1.description">
+                                   
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- شهادة 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.education.cert1.title">
+                                          </h4>
+                                    <span class="text-space-accent-2"
+                                        data-i18n="home.experience.education.cert1.date">2020</span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.education.cert1.issuer">
+                                 </h5>
+                                <p class="text-gray-300" data-i18n="home.experience.education.cert1.description">
+                                   
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- شهادة 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.education.cert2.title">شهادة
+                                        مطور الويب الشامل</h4>
+                                    <span class="text-space-accent-2"
+                                        data-i18n="home.experience.education.cert2.date">2019</span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.education.cert2.institution">Udacity</h5>
+                                <p class="text-gray-300" data-i18n="home.experience.education.cert2.description">
+                                    شهادة في تطوير الويب الشامل، تغطي تقنيات الواجهة الأمامية والخلفية وقواعد البيانات.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- شهادة 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div
+                                class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 timeline-content">
+                                <div class="flex flex-wrap justify-between mb-2">
+                                    <h4 class="text-xl font-bold" data-i18n="home.experience.education.cert3.title">شهادة AWS
+                                        المعتمدة</h4>
+                                    <span class="text-space-accent-2"
+                                        data-i18n="home.experience.education.cert3.date">2021</span>
+                                </div>
+                                <h5 class="mb-4 text-lg" data-i18n="home.experience.education.cert3.institution">Amazon Web
+                                    Services</h5>
+                                <p class="text-gray-300" data-i18n="home.experience.education.cert3.description">
+                                    شهادة في تطوير وتشغيل التطبيقات على منصة Amazon Web Services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع المميزة -->
+    <section id="projects" class="relative py-20 overflow-hidden bg-space-primary">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="projects.title">مشاريعي
+                    المميزة</h2>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="projects.subtitle">
+                    بعض المشاريع التي قمت بتطويرها باستخدام أحدث التقنيات والأدوات
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- مشروع 1 -->
+                <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <div class="relative">
+                        <img src="./assets/images/cawash.png" alt="مشروع 1" class="object-fill w-full h-64">
+                        <div class="project-content bg-space-secondary bg-opacity-90">
+                            <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project1.title">موقع حجز غسيل سيارات 
+                            </h3>
+                            <p class="mb-4 text-gray-300" data-i18n="projects.projects.project1.description">تطوير متجر
+                                إلكتروني متكامل باستخدام React و Node.js</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TailWindCss</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                               
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySql</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="http://targetcom.free.nf/?i=1" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fas fa-external-link-alt"></i>
+                                    <span data-i18n="projects.projects.project1.links.preview">معاينة</span>
+                                </a>
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fab fa-github"></i>
+                                    <span data-i18n="projects.projects.project.links.code">الكود</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 2 -->
+                <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <div class="relative">
+                        <img src="./assets/images/him.png"  alt="مشروع 2" class="object-contain w-full h-64">
+                        <div class="project-content bg-space-secondary bg-opacity-90">
+                            <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project2.title">موقع خدمات همالايا الطبية </h3>
+                            <p class="mb-4 text-gray-300" data-i18n="projects.projects.project2.description">هي أحدى الشركات الرائدة والمتخصصة في تنسيق السياحة العلاجية، والاستشارات والتدريب</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">CSS3</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Bootstrap</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySql</span>
+                                    <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                                    <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Filament</span>
+                                
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://himsmpc.com/" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fas fa-external-link-alt"></i>
+                                    <span data-i18n="projects.projects.project2.links.preview">معاينة</span>
+                                </a>
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fab fa-github"></i>
+                                    <span data-i18n="projects.projects.project2.links.code">الكود</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 3 -->
+                <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                    data-aos-delay="300">
+                    <div class="relative">
+                        <img src="./assets/images/platecar.png" alt="مشروع 3" class="object-contain w-full h-64">
+                        <div class="project-content bg-space-secondary bg-opacity-90">
+                            <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project3.title">منصة لبيع قطع غيار السيارات 
+                            </h3>
+                            <p class="mb-4 text-gray-300" data-i18n="projects.projects.project3.description">
+                                موقع يوفر لك أحدث وأجود قطع غيار السيارات الأصلية بأسعار تنافسية مع ضمان الجودة والتوصيل السريع 
+                              </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TailWindCss</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">VueJS</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySql</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fas fa-external-link-alt"></i>
+                                    <span data-i18n="projects.projects.project3.links.preview">معاينة</span>
+                                </a>
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fab fa-github"></i>
+                                    <span data-i18n="projects.projects.project3.links.code">الكود</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر عرض المزيد -->
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <a href="projects.html" class="btn-primary">
+                    <i class="mr-2 fas fa-project-diagram"></i>
+                    <span data-i18n="projects.view_all">عرض جميع المشاريع</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشهادات -->
+    <section id="certificates" class="relative py-20 overflow-hidden bg-space-secondary">
+        <!-- خلفية الضباب الكوني -->
+        <div class="absolute inset-0 z-0 cosmic-fog"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="home.experience.certificates.title">
+                    الشهادات</h2>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="home.experience.certificates.description">
+                    الشهادات والدورات التدريبية التي حصلت عليها
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- شهادة 1 -->
+                <div class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 certificate-card"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 certificate-icon">
+                            <i class="text-xl fas fa-certificate text-space-accent-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold" data-i18n="home.experience.certificates.items.cert1.title">مطور React المعتمد</h3>
+                    </div>
+                    <p class="mb-4 text-gray-300" data-i18n="home.experience.certificates.items.cert1.description">
+                        شهادة احترافية في تطوير تطبيقات الويب باستخدام React وأدواته المختلفة.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-space-accent-2" data-i18n="home.experience.certificates.items.cert1.issuer">Meta
+                            (Facebook)</span>
+                        <span class="text-gray-400" data-i18n="home.experience.certificates.items.cert1.date">2020</span>
+                    </div>
+                </div>
+
+                <!-- شهادة 2 -->
+                <div class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 certificate-card"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 certificate-icon">
+                            <i class="text-xl fas fa-certificate text-space-accent-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold" data-i18n="home.experience.certificates.items.cert2.title">مطور الويب الشامل</h3>
+                    </div>
+                    <p class="mb-4 text-gray-300" data-i18n="home.experience.certificates.items.cert2.description">
+                        شهادة في تطوير الويب الشامل، تغطي تقنيات الواجهة الأمامية والخلفية وقواعد البيانات.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-space-accent-2" data-i18n="home.experience.certificates.items.cert2.issuer">Udacity</span>
+                        <span class="text-gray-400" data-i18n="home.experience.certificates.items.cert2.date">2019</span>
+                    </div>
+                </div>
+
+                <!-- شهادة 3 -->
+                <div class="p-6 bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 certificate-card"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 certificate-icon">
+                            <i class="text-xl fas fa-certificate text-space-accent-2"></i>
+                        </div>
+                        <h3 class="text-xl font-bold" data-i18n="home.experience.certificates.items.cert3.title">AWS المعتمدة</h3>
+                    </div>
+                    <p class="mb-4 text-gray-300" data-i18n="home.experience.certificates.items.cert3.description">
+                        شهادة في تطوير وتشغيل التطبيقات على منصة Amazon Web Services.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-space-accent-2" data-i18n="home.experience.certificates.items.cert3.issuer">Amazon Web
+                            Services</span>
+                        <span class="text-gray-400" data-i18n="home.experience.certificates.items.cert3.date">2021</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="relative py-20 overflow-hidden bg-space-primary">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="contact.title">تواصل معي
+                </h2>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="contact.subtitle">
+                    هل لديك مشروع في ذهنك؟ أو استفسار؟ أنا هنا للإجابة على جميع أسئلتك ومساعدتك في تحقيق أهدافك.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+                <!-- معلومات التواصل -->
+                <div data-aos="fade-right">
+                    <h3 class="mb-6 text-2xl font-bold font-orbitron" data-i18n="contact.info.title">معلومات التواصل
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- البريد الإلكتروني -->
+                        <div
+                            class="flex items-start p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 contact-info-item">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 contact-info-icon">
+                                <i class="text-xl fas fa-envelope text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.email.title">البريد
+                                    الإلكتروني</h4>
+                                <p class="text-gray-300" data-i18n="contact.info.email.value">example@example.com</p>
+                            </div>
+                        </div>
+
+                        <!-- الهاتف -->
+                        <div
+                            class="flex items-start p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 contact-info-item">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 contact-info-icon">
+                                <i class="text-xl fas fa-phone-alt text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.phone.title">الهاتف</h4>
+                                <p class="text-gray-300" data-i18n="contact.info.phone.value">+966 5XXXXXXXX</p>
+                            </div>
+                        </div>
+
+                        <!-- الموقع -->
+                        <div
+                            class="flex items-start p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 contact-info-item">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 contact-info-icon">
+                                <i class="text-xl fas fa-map-marker-alt text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.location.title">الموقع</h4>
+                                <p class="text-gray-300" data-i18n="contact.info.location.value">الرياض، المملكة العربية
+                                    السعودية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- وسائل التواصل الاجتماعي -->
+                    <div class="mt-8">
+                        <h4 class="mb-4 text-xl font-medium" data-i18n="contact.info.social.contactinfo">تواصل معي على</h4>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج التواصل -->
+                <div data-aos="fade-left">
+                    <h3 class="mb-6 text-2xl font-bold font-orbitron" data-i18n="contact.form.title">أرسل رسالة</h3>
+
+                    <div class="success-message" id="success-message">
+                        <div class="flex items-center">
+                            <i class="mr-2 text-xl fas fa-check-circle text-space-accent-3"></i>
+                            <span data-i18n="contact.form.success">تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.</span>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                            <!-- الاسم -->
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+                                <label for="name" class="form-label" data-i18n="contact.form.name.placeholder">الاسم</label>
+                            </div>
+
+                            <!-- البريد الإلكتروني -->
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" placeholder=" "
+                                    required>
+                                <label for="email" class="form-label" data-i18n="contact.form.email.placeholder">البريد
+                                    الإلكتروني</label>
+                            </div>
+                        </div>
+
+                        <!-- الموضوع -->
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder=" "
+                                required>
+                            <label for="subject" class="form-label" data-i18n="contact.form.subject.placeholder">الموضوع</label>
+                        </div>
+
+                        <!-- الرسالة -->
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" class="form-control" placeholder=" "
+                                required></textarea>
+                            <label for="message" class="form-label" data-i18n="contact.form.message.placeholder">الرسالة</label>
+                        </div>
+
+                        <!-- زر الإرسال -->
+                        <div class="text-right">
+                            <button type="submit" class="btn-primary">
+                                <i class="mr-2 fas fa-paper-plane"></i>
+                                <span data-i18n="contact.form.button">إرسال الرسالة</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+ <!-- التذييل -->
+ <footer class="relative py-12 overflow-hidden bg-space-primary">
+    <!-- خلفية النجوم المتحركة -->
+    <div class="absolute inset-0 z-0 stars-container"></div>
+    
+    <div class="container relative z-10 px-4 mx-auto">
+        <div class="flex flex-col items-center justify-between md:flex-row">
+            <div class="mb-6 md:mb-0">
+                <a href="index.html" class="flex items-center">
+                    <i class="mr-2 text-2xl fas fa-rocket text-space-accent-2"></i>
+                    <span class="text-xl font-bold font-orbitron" data-i18n="common.footer.name">مطور ويب</span>
+                </a>
+                <p class="mt-2 text-gray-400" data-i18n="common.footer.description"> مطور ويب متكامل متخصص في بناء تجارب رقمية استثنائية باستخدام أحدث التقنيات والأدوات.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <i class="text-xl fab fa-github"></i>
+                </a>
+                <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <i class="text-xl fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <i class="text-xl fab fa-twitter"></i>
+                </a>
+                <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <i class="text-xl fab fa-instagram"></i>
+                </a>
+                <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <i class="text-xl fab fa-dribbble"></i>
+                </a>
+            </div>
+        </div>
+        
+        <hr class="my-8 border-gray-800">
+        
+        <div class="flex flex-col items-center justify-between md:flex-row">
+            <p class="text-sm text-gray-500" data-i18n="common.footer.copyright">
+                &copy; <span id="current-year">2025</span> جميع الحقوق محفوظة
+            </p>
+            
+            <div class="flex flex-wrap mt-4 md:mt-0">
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.privacy">سياسة الخصوصية</a>
+                <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.TermsConditions">الشروط والأحكام</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- زر التمرير لأعلى -->
+    <button id="scroll-to-top"
+        class="fixed z-50 flex items-center justify-center invisible w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 bottom-6 right-6 bg-space-accent-1">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- سكريبتات JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/responsive-test.js"></script>
+
+    <script>
+        // تهيئة مكتبة AOS للرسوم المتحركة عند التمرير
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false
+        });
+
+        // تحديث السنة الحالية في حقوق النشر
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // تحريك شريط تقدم المهارات
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress-bar');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                bar.style.width = width + '%';
+            });
+        }
+
+        // تنفيذ تحريك شريط تقدم المهارات عند ظهور قسم المهارات
+        const skillsSection = document.getElementById('skills');
+
+        if (skillsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            observer.observe(skillsSection);
+        }
+
+        // التحقق من صحة نموذج الاتصال
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // التحقق من صحة الحقول
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+
+                let isValid = true;
+
+                // التحقق من الاسم
+                if (name.value.trim() === '') {
+                    showError(name, 'الاسم مطلوب');
+                    isValid = false;
+                } else {
+                    clearError(name);
+                }
+
+                // التحقق من البريد الإلكتروني
+                if (email.value.trim() === '') {
+                    showError(email, 'البريد الإلكتروني مطلوب');
+                    isValid = false;
+                } else if (!isValidEmail(email.value)) {
+                    showError(email, 'يرجى إدخال بريد إلكتروني صحيح');
+                    isValid = false;
+                } else {
+                    clearError(email);
+                }
+
+                // التحقق من الموضوع
+                if (subject.value.trim() === '') {
+                    showError(subject, 'الموضوع مطلوب');
+                    isValid = false;
+                } else {
+                    clearError(subject);
+                }
+
+                // التحقق من الرسالة
+                if (message.value.trim() === '') {
+                    showError(message, 'الرسالة مطلوبة');
+                    isValid = false;
+                } else {
+                    clearError(message);
+                }
+
+                // إذا كانت جميع الحقول صحيحة، أرسل النموذج
+                if (isValid) {
+                    // محاكاة إرسال النموذج
+                    simulateFormSubmission();
+                }
+            });
+        }
+
+        // التحقق من صحة البريد الإلكتروني
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // إظهار رسالة خطأ
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            let errorElement = formGroup.querySelector('.error-message');
+
+            input.classList.add('invalid');
+            input.classList.remove('valid');
+
+            if (!errorElement) {
+                errorElement = document.createElement('div');
+                errorElement.className = 'error-message';
+                formGroup.appendChild(errorElement);
+            }
+
+            errorElement.textContent = message;
+        }
+
+        // إزالة رسالة الخطأ
+        function clearError(input) {
+            const formGroup = input.parentElement;
+            const errorElement = formGroup.querySelector('.error-message');
+
+            input.classList.remove('invalid');
+            input.classList.add('valid');
+
+            if (errorElement) {
+                errorElement.remove();
+            }
+        }
+
+        // محاكاة إرسال النموذج
+        function simulateFormSubmission() {
+            // إظهار حالة التحميل
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="mr-2 fas fa-spinner fa-spin"></i><span>جاري الإرسال...</span>';
+
+            // محاكاة تأخير الشبكة
+            setTimeout(function () {
+                // إعادة تعيين النموذج
+                contactForm.reset();
+
+                // إظهار رسالة النجاح
+                successMessage.style.display = 'block';
+
+                // إعادة تعيين زر الإرسال
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+
+                // إخفاء رسالة النجاح بعد 5 ثوانٍ
+                setTimeout(function () {
+                    successMessage.style.display = 'none';
+                }, 5000);
+
+                // تأثير انفجار نجمي للاحتفال
+                createSuccessEffect();
+            }, 1500);
+        }
+
+        // تأثير انفجار نجمي للاحتفال
+        function createSuccessEffect() {
+            // إنشاء عدة انفجارات نجمية
+            for (let i = 0; i < 5; i++) {
+                setTimeout(function () {
+                    const starburst = document.createElement('div');
+                    starburst.classList.add('starburst-effect');
+
+                    // تحديد موقع عشوائي
+                    const x = Math.random() * window.innerWidth;
+                    const y = Math.random() * (window.innerHeight / 2) + window.innerHeight / 4;
+
+                    starburst.style.left = `${x}px`;
+                    starburst.style.top = `${y}px`;
+
+                    document.body.appendChild(starburst);
+
+                    // إزالة العنصر بعد انتهاء التأثير
+                    setTimeout(() => {
+                        starburst.remove();
+                    }, 1000);
+                }, i * 200);
+            }
+        }
+
+        // إضافة تأثيرات التركيز للحقول
+        const formControls = document.querySelectorAll('.form-control');
+
+        formControls.forEach(control => {
+            control.addEventListener('focus', function () {
+                this.parentElement.classList.add('input-focused');
+            });
+
+            control.addEventListener('blur', function () {
+                this.parentElement.classList.remove('input-focused');
+            });
+        });
+
+        // زر التمرير لأعلى
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.remove('opacity-0', 'invisible');
+                scrollToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopButton.classList.remove('opacity-100', 'visible');
+                scrollToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // تنعيم التمرير عند النقر على روابط التنقل
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+
+                    // إغلاق القائمة المنسدلة في الشاشات الصغيرة
+                    const mobileMenu = document.querySelector('.navbar-mobile-menu');
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                        document.querySelector('.hamburger').classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

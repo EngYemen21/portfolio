@@ -1,0 +1,312 @@
+// ملف JavaScript الرئيسي للموقع الشخصي بطابع الفضاء
+
+document.addEventListener('DOMContentLoaded', function() {
+    // تهيئة تأثيرات الموقع
+    initSpaceEffects();
+    
+    // تهيئة تبديل الوضع الليلي/النهاري
+    initDarkModeToggle();
+    
+    // تهيئة تأثيرات التمرير
+    initScrollEffects();
+    
+    // تهيئة تأثيرات الكتابة المتتالية
+    initTypingEffect();
+    
+    // تهيئة تأثيرات الكواكب
+    initPlanetEffects();
+});
+
+// ===== تأثيرات الفضاء =====
+function initSpaceEffects() {
+    // إنشاء تأثير النجوم المتحركة في الخلفية
+    createStars();
+    
+    // إنشاء تأثير الغبار الكوني
+    createCosmicDust();
+    
+    // إنشاء تأثير الكواكب المتحركة
+    createPlanets();
+}
+
+// إنشاء النجوم المتحركة
+function createStars() {
+    const starsContainers = document.querySelectorAll('.stars-container');
+    
+    starsContainers.forEach(container => {
+        // إنشاء عدد عشوائي من النجوم
+        const starsCount = Math.floor(Math.random() * 50) + 50;
+        
+        for (let i = 0; i < starsCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            
+            // تحديد موقع وحجم وسرعة عشوائية لكل نجمة
+            const size = Math.random() * 3 + 1;
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            const duration = Math.random() * 3 + 2;
+            const delay = Math.random() * 2;
+            
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${posX}%`;
+            star.style.top = `${posY}%`;
+            star.style.animationDuration = `${duration}s`;
+            star.style.animationDelay = `${delay}s`;
+            
+            container.appendChild(star);
+        }
+    });
+}
+
+// إنشاء تأثير الغبار الكوني
+function createCosmicDust() {
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        const dustContainer = document.createElement('div');
+        dustContainer.classList.add('cosmic-dust-container');
+        section.appendChild(dustContainer);
+        
+        // إنشاء جزيئات الغبار الكوني
+        const dustCount = 20;
+        
+        for (let i = 0; i < dustCount; i++) {
+            const dust = document.createElement('div');
+            dust.classList.add('cosmic-dust');
+            
+            // تحديد خصائص عشوائية لكل جزيء
+            const size = Math.random() * 5 + 2;
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            const duration = Math.random() * 20 + 10;
+            const delay = Math.random() * 5;
+            const opacity = Math.random() * 0.3 + 0.1;
+            
+            dust.style.width = `${size}px`;
+            dust.style.height = `${size}px`;
+            dust.style.left = `${posX}%`;
+            dust.style.top = `${posY}%`;
+            dust.style.opacity = opacity;
+            dust.style.animationDuration = `${duration}s`;
+            dust.style.animationDelay = `${delay}s`;
+            
+            dustContainer.appendChild(dust);
+        }
+    });
+}
+
+// إنشاء تأثير الكواكب المتحركة
+function createPlanets() {
+    // تنفيذ في وظيفة منفصلة
+}
+
+// ===== تبديل الوضع الليلي/النهاري =====
+function initDarkModeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const body = document.body;
+    const html = document.documentElement;
+    
+    // التحقق من الوضع المخزن محليًا
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        enableDarkMode();
+    }
+    
+    // إضافة مستمع حدث لزر تبديل الوضع
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    // تبديل الوضع
+    function toggleTheme() {
+        if (body.classList.contains('dark-mode')) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+        
+        // إضافة تأثير انتقالي للصفحة
+        body.classList.add('theme-transition');
+        setTimeout(() => {
+            body.classList.remove('theme-transition');
+        }, 1000);
+    }
+    
+    // تفعيل الوضع الليلي
+    function enableDarkMode() {
+        body.classList.add('dark-mode');
+        html.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        
+        // تحديث نص الزر
+        updateThemeButtonText('light');
+    }
+    
+    // تعطيل الوضع الليلي
+    function disableDarkMode() {
+        body.classList.remove('dark-mode');
+        html.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        
+        // تحديث نص الزر
+        updateThemeButtonText('dark');
+    }
+    
+    // تحديث نص زر تبديل الوضع
+    function updateThemeButtonText(mode) {
+        const currentLang = document.documentElement.lang || 'ar';
+        const themeText = currentLang === 'ar' ? 
+            (mode === 'dark' ? 'وضع الليل' : 'وضع النهار') : 
+            (mode === 'dark' ? 'Dark Mode' : 'Light Mode');
+        
+        const themeIcon = mode === 'dark' ? 'fa-moon' : 'fa-sun';
+        
+        if (themeToggle) {
+            const textSpan = themeToggle.querySelector('span');
+            const icon = themeToggle.querySelector('i');
+            
+            if (textSpan) textSpan.textContent = themeText;
+            if (icon) {
+                icon.className = '';
+                icon.classList.add('fas', themeIcon);
+            }
+        }
+        
+        if (mobileThemeToggle) {
+            const textSpan = mobileThemeToggle.querySelector('span');
+            const icon = mobileThemeToggle.querySelector('i');
+            
+            if (textSpan) textSpan.textContent = themeText;
+            if (icon) {
+                icon.className = '';
+                icon.classList.add('fas', themeIcon);
+            }
+        }
+    }
+}
+
+// ===== تأثيرات التمرير =====
+function initScrollEffects() {
+    // تأثير التمرير المتوازي
+    initParallaxEffect();
+    
+    // تأثير ظهور العناصر عند التمرير
+    initScrollReveal();
+}
+
+// تأثير التمرير المتوازي
+function initParallaxEffect() {
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        // تطبيق تأثير التمرير المتوازي على العناصر المختلفة
+        document.querySelectorAll('.parallax').forEach(element => {
+            const speed = element.getAttribute('data-speed') || 0.5;
+            element.style.transform = `translateY(${scrollPosition * speed}px)`;
+        });
+        
+        // تأثير تمرير خاص للنجوم
+        document.querySelectorAll('.stars-container').forEach(element => {
+            element.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+        });
+    });
+}
+
+// تأثير ظهور العناصر عند التمرير
+function initScrollReveal() {
+    // تم تنفيذه باستخدام مكتبة AOS
+}
+
+// ===== تأثير الكتابة المتتالية =====
+function initTypingEffect() {
+    const typingElements = document.querySelectorAll('.typing-effect');
+    
+    typingElements.forEach(element => {
+        const text = element.getAttribute('data-text');
+        const speed = parseInt(element.getAttribute('data-speed')) || 100;
+        
+        if (text) {
+            element.textContent = '';
+            let i = 0;
+            
+            function typeWriter() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            
+            // بدء تأثير الكتابة عندما يكون العنصر في نطاق الرؤية
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(typeWriter, 500);
+                        observer.unobserve(element);
+                    }
+                });
+            });
+            
+            observer.observe(element);
+        }
+    });
+}
+
+// ===== تأثيرات الكواكب =====
+function initPlanetEffects() {
+    // تنفيذ في وظيفة منفصلة
+}
+
+// ===== تأثيرات إضافية =====
+
+// تأثير انفجار النجوم عند النقر
+document.addEventListener('click', function(event) {
+    createStarburstEffect(event);
+});
+
+function createStarburstEffect(event) {
+    const starburst = document.createElement('div');
+    starburst.classList.add('starburst-effect');
+    
+    // تحديد موقع النقر
+    const x = event.clientX;
+    const y = event.clientY;
+    
+    starburst.style.left = `${x}px`;
+    starburst.style.top = `${y}px`;
+    
+    document.body.appendChild(starburst);
+    
+    // إزالة العنصر بعد انتهاء التأثير
+    setTimeout(() => {
+        starburst.remove();
+    }, 1000);
+}
+
+// تأثير التمرير السلس
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // تحديث عنوان URL
+            history.pushState(null, null, targetId);
+        }
+    });
+});

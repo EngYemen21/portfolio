@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-i18n-title="contact.title">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معي | مطور ويب</title>
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="./dist/output.css" rel="stylesheet">
+
+    <link href="./src/output.css" rel="stylesheet">
+    <!-- CSS الإضافي -->
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/dark-mode.css">
+    <link rel="stylesheet" href="./src/css/navbar.css">
+    <link rel="stylesheet" href="./src/css/space-effects.css">
+    
+    <!-- مكتبات الرسوم المتحركة -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- تنسيقات مخصصة للغة العربية -->
+  
+</head>
+<body class="overflow-x-hidden text-white bg-space-primary">
+    <!-- شريط التنقل -->
+    <nav class="space-navbar transparent">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-rocket logo-icon"></i>
+                <span class="logo-text" data-i18n="common.nav.home">الرئيسية</span>
+            </a>
+            
+            <ul class="navbar-links">
+                <li><a href="index.html#home" data-i18n="common.nav.home">الرئيسية</a></li>
+                <li><a href="index.html#about" data-i18n="common.nav.about">نبذة عني</a></li>
+                <li><a href="index.html#skills" data-i18n="common.nav.skills">المهارات</a></li>
+                <li><a href="index.html#experience" data-i18n="common.nav.experience">الخبرات</a></li>
+                <li><a href="projects.html" data-i18n="common.nav.projects">المشاريع</a></li>
+                <li><a href="contact.html" class="active" data-i18n="common.nav.contact">تواصل معي</a></li>
+            </ul>
+            
+            <div class="navbar-toggles">
+                <button id="language-toggle" class="toggle-btn" data-lang="en">
+                    <i class="fas fa-language"></i>
+                    <span data-i18n="common.language.en">English</span>
+                </button>
+                
+                <button id="theme-toggle" class="toggle-btn">
+                    <i class="fas fa-moon"></i>
+                    <span data-i18n="common.theme.dark">وضع الليل</span>
+                </button>
+            </div>
+            
+            <button class="navbar-menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- القائمة المنسدلة للشاشات الصغيرة -->
+    <div class="navbar-mobile-menu">
+        <ul class="navbar-mobile-links">
+            <li><a href="index.html#home" data-i18n="common.nav.home">الرئيسية</a></li>
+            <li><a href="index.html#about" data-i18n="common.nav.about">نبذة عني</a></li>
+            <li><a href="index.html#skills" data-i18n="common.nav.skills">المهارات</a></li>
+            <li><a href="index.html#experience" data-i18n="common.nav.experience">الخبرات</a></li>
+            <li><a href="projects.html" data-i18n="common.nav.projects">المشاريع</a></li>
+            <li><a href="contact.html" class="active" data-i18n="common.nav.contact">تواصل معي</a></li>
+        </ul>
+        
+        <div class="navbar-mobile-toggles">
+            <button id="mobile-language-toggle" class="toggle-btn" data-lang="en">
+                <i class="fas fa-language"></i>
+                <span data-i18n="common.language.en">English</span>
+            </button>
+            
+            <button id="mobile-theme-toggle" class="toggle-btn">
+                <i class="fas fa-moon"></i>
+                <span data-i18n="common.theme.dark">وضع الليل</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- رأس صفحة التواصل -->
+    <section class="relative py-20 pt-32 overflow-hidden">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+        
+        <!-- كوكب متحرك -->
+        <div class="absolute w-32 h-32 rounded-full top-1/4 right-10 bg-space-accent-1 opacity-30 animate-pulse-slow planet-effect"></div>
+        
+        <!-- مجرة متحركة -->
+        <div class="absolute w-64 h-64 rounded-full bottom-1/4 left-10 bg-space-accent-2 opacity-10 animate-spin-slow galaxy-effect"></div>
+        
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h1 class="mb-4 text-4xl font-bold md:text-5xl font-orbitron" data-aos="fade-up" data-i18n="contact.title">تواصل معي</h1>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200" data-i18n="contact.subtitle">
+                    هل لديك مشروع في ذهنك؟ أو استفسار؟ أنا هنا للإجابة على جميع أسئلتك ومساعدتك في تحقيق أهدافك.
+                </p>
+            </div>
+            
+          
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+                <!-- معلومات التواصل -->
+                <div data-aos="fade-right">
+                    <h3 class="mb-6 text-2xl font-bold font-orbitron" data-i18n="contact.info.title">معلومات التواصل
+                    </h3>
+
+                    <div class="space-y-6">
+                        <!-- البريد الإلكتروني -->
+                        <div
+                            class="flex items-start p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 contact-info-item">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 contact-info-icon">
+                                <i class="text-xl fas fa-envelope text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.email.title">البريد
+                                    الإلكتروني</h4>
+                                <p class="text-gray-300" data-i18n="contact.info.email.value">example@example.com</p>
+                            </div>
+                        </div>
+
+                        <!-- الهاتف -->
+                        <div
+                            class="flex items-start p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 contact-info-item">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 contact-info-icon">
+                                <i class="text-xl fas fa-phone-alt text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.phone.title">الهاتف</h4>
+                                <p class="text-gray-300" data-i18n="contact.info.phone.value">+966 5XXXXXXXX</p>
+                            </div>
+                        </div>
+
+                        <!-- الموقع -->
+                        <div
+                            class="flex items-start p-4 border rounded-lg bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 contact-info-item">
+                            <div
+                                class="flex items-center justify-center w-12 h-12 mr-4 rounded-full bg-space-accent-1 bg-opacity-20 contact-info-icon">
+                                <i class="text-xl fas fa-map-marker-alt text-space-accent-2"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.location.title">الموقع</h4>
+                                <p class="text-gray-300" data-i18n="contact.info.location.value">اليمن - تعز  
+                                    </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- وسائل التواصل الاجتماعي -->
+                    <div class="mt-8">
+                        <h4 class="mb-4 text-xl font-medium" data-i18n="contact.info.social.contactinfo">تواصل معي على</h4>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-github"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-twitter"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
+                                <i class="text-xl fab fa-dribbble"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج التواصل -->
+                <div data-aos="fade-left">
+                    <h3 class="mb-6 text-2xl font-bold font-orbitron" data-i18n="contact.form.title">أرسل رسالة</h3>
+
+                    <div class="success-message" id="success-message">
+                        <div class="flex items-center">
+                            <i class="mr-2 text-xl fas fa-check-circle text-space-accent-3"></i>
+                            <span data-i18n="contact.form.success">تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.</span>
+                        </div>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                            <!-- الاسم -->
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
+                                <label for="name" class="form-label" data-i18n="contact.form.name.placeholder">الاسم</label>
+                            </div>
+
+                            <!-- البريد الإلكتروني -->
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" class="form-control" placeholder=" "
+                                    required>
+                                <label for="email" class="form-label" data-i18n="contact.form.email.placeholder">البريد
+                                    الإلكتروني</label>
+                            </div>
+                        </div>
+
+                        <!-- الموضوع -->
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder=" "
+                                required>
+                            <label for="subject" class="form-label" data-i18n="contact.form.subject.placeholder">الموضوع</label>
+                        </div>
+
+                        <!-- الرسالة -->
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" class="form-control" placeholder=" "
+                                required></textarea>
+                            <label for="message" class="form-label" data-i18n="contact.form.message.placeholder">الرسالة</label>
+                        </div>
+
+                        <!-- زر الإرسال -->
+                        <div class="text-right">
+                            <button type="submit" class="btn-primary">
+                                <i class="mr-2 fas fa-paper-plane"></i>
+                                <span data-i18n="contact.form.button">إرسال الرسالة</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- قسم الأسئلة الشائعة -->
+    <section class="relative py-16 overflow-hidden bg-space-secondary">
+        <!-- خلفية الضباب الكوني -->
+        <div class="absolute inset-0 z-0 cosmic-fog"></div>
+        
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-12 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="contact.faq.title">الأسئلة الشائعة</h2>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <!-- سؤال 1 -->
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q1.question">ما هي خدماتك؟</h3>
+                    <p class="text-gray-300" data-i18n="contact.faq.q1.answer">أقدم خدمات تطوير الويب المتكاملة، بما في ذلك تصميم وتطوير المواقع والتطبيقات، وتحسين تجربة المستخدم، وتطوير واجهات المستخدم التفاعلية، وتطوير الواجهات الخلفية.</p>
+                </div>
+                
+                <!-- سؤال 2 -->
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q2.question">كم تكلفة المشروع؟</h3>
+                    <p class="text-gray-300" data-i18n="contact.faq.q2.answer">تختلف التكلفة حسب نوع المشروع ومتطلباته. أقدم تسعيرًا مخصصًا لكل مشروع بناءً على نطاق العمل والوقت المطلوب. يمكنك التواصل معي للحصول على عرض سعر مجاني.</p>
+                </div>
+                
+                <!-- سؤال 3 -->
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q3.question">كم من الوقت يستغرق تنفيذ المشروع؟</h3>
+                    <p class="text-gray-300" data-i18n="contact.faq.q3.answer">يعتمد وقت التنفيذ على تعقيد المشروع وحجمه. عادةً ما تستغرق المواقع البسيطة من أسبوع إلى أسبوعين، بينما قد تستغرق المشاريع الأكثر تعقيدًا من شهر إلى ثلاثة أشهر.</p>
+                </div>
+                
+                <!-- سؤال 4 -->
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q4.question">هل تقدم خدمات الصيانة بعد إطلاق المشروع؟</h3>
+                    <p class="text-gray-300" data-i18n="contact.faq.q4.answer">نعم، أقدم خدمات الصيانة والدعم الفني بعد إطلاق المشروع. يمكنك الاختيار من بين خطط الصيانة الشهرية أو السنوية حسب احتياجاتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- التذييل -->
+    <footer class="relative py-12 overflow-hidden bg-space-primary">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+        
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="flex flex-col items-center justify-between md:flex-row">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="flex items-center">
+                        <i class="mr-2 text-2xl fas fa-rocket text-space-accent-2"></i>
+                        <span class="text-xl font-bold font-orbitron" data-i18n="common.footer.name">مطور ويب</span>
+                    </a>
+                    <p class="mt-2 text-gray-400" data-i18n="common.footer.description"> مطور ويب متكامل متخصص في بناء تجارب رقمية استثنائية باستخدام أحدث التقنيات والأدوات.</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-dribbble"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="my-8 border-gray-800">
+            
+            <div class="flex flex-col items-center justify-between md:flex-row">
+                <p class="text-sm text-gray-500" data-i18n="common.footer.copyright">
+                    &copy; <span id="current-year">2025</span> جميع الحقوق محفوظة
+                </p>
+                
+                <div class="flex flex-wrap mt-4 md:mt-0">
+                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.privacy">سياسة الخصوصية</a>
+                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.TermsConditions">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- زر التمرير لأعلى -->
+    <button id="scroll-to-top" class="fixed z-50 flex items-center justify-center invisible w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 bottom-6 right-6 bg-space-accent-1">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- سكريبتات JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/responsive-test.js"></script>
+    
+    <script>
+        // تهيئة مكتبة AOS للرسوم المتحركة عند التمرير
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false
+        });
+        
+        // تحديث السنة الحالية في حقوق النشر
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // التحقق من صحة نموذج الاتصال
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // التحقق من صحة الحقول
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                
+                let isValid = true;
+                
+                // التحقق من الاسم
+                if (name.value.trim() === '') {
+                    showError(name, 'الاسم مطلوب');
+                    isValid = false;
+                } else {
+                    clearError(name);
+                }
+                
+                // التحقق من البريد الإلكتروني
+                if (email.value.trim() === '') {
+                    showError(email, 'البريد الإلكتروني مطلوب');
+                    isValid = false;
+                } else if (!isValidEmail(email.value)) {
+                    showError(email, 'يرجى إدخال بريد إلكتروني صحيح');
+                    isValid = false;
+                } else {
+                    clearError(email);
+                }
+                
+                // التحقق من الموضوع
+                if (subject.value.trim() === '') {
+                    showError(subject, 'الموضوع مطلوب');
+                    isValid = false;
+                } else {
+                    clearError(subject);
+                }
+                
+                // التحقق من الرسالة
+                if (message.value.trim() === '') {
+                    showError(message, 'الرسالة مطلوبة');
+                    isValid = false;
+                } else {
+                    clearError(message);
+                }
+                
+                // إذا كانت جميع الحقول صحيحة، أرسل النموذج
+                if (isValid) {
+                    // محاكاة إرسال النموذج
+                    simulateFormSubmission();
+                }
+            });
+        }
+        
+        // التحقق من صحة البريد الإلكتروني
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // إظهار رسالة خطأ
+        function showError(input, message) {
+            const formGroup = input.parentElement;
+            let errorElement = formGroup.querySelector('.error-message');
+            
+            input.classList.add('invalid');
+            input.classList.remove('valid');
+            
+            if (!errorElement) {
+                errorElement = document.createElement('div');
+                errorElement.className = 'error-message';
+                formGroup.appendChild(errorElement);
+            }
+            
+            errorElement.textContent = message;
+        }
+        
+        // إزالة رسالة الخطأ
+        function clearError(input) {
+            const formGroup = input.parentElement;
+            const errorElement = formGroup.querySelector('.error-message');
+            
+            input.classList.remove('invalid');
+            input.classList.add('valid');
+            
+            if (errorElement) {
+                errorElement.remove();
+            }
+        }
+        
+        // محاكاة إرسال النموذج
+        function simulateFormSubmission() {
+            // إظهار حالة التحميل
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<i class="mr-2 fas fa-spinner fa-spin"></i><span>جاري الإرسال...</span>';
+            
+            // محاكاة تأخير الشبكة
+            setTimeout(function() {
+                // إعادة تعيين النموذج
+                contactForm.reset();
+                
+                // إظهار رسالة النجاح
+                successMessage.style.display = 'block';
+                
+                // إعادة تعيين زر الإرسال
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                
+                // إخفاء رسالة النجاح بعد 5 ثوانٍ
+                setTimeout(function() {
+                    successMessage.style.display = 'none';
+                }, 5000);
+                
+                // تأثير انفجار نجمي للاحتفال
+                createSuccessEffect();
+            }, 1500);
+        }
+        
+        // تأثير انفجار نجمي للاحتفال
+        function createSuccessEffect() {
+            // إنشاء عدة انفجارات نجمية
+            for (let i = 0; i < 5; i++) {
+                setTimeout(function() {
+                    const starburst = document.createElement('div');
+                    starburst.classList.add('starburst-effect');
+                    
+                    // تحديد موقع عشوائي
+                    const x = Math.random() * window.innerWidth;
+                    const y = Math.random() * (window.innerHeight / 2) + window.innerHeight / 4;
+                    
+                    starburst.style.left = `${x}px`;
+                    starburst.style.top = `${y}px`;
+                    
+                    document.body.appendChild(starburst);
+                    
+                    // إزالة العنصر بعد انتهاء التأثير
+                    setTimeout(() => {
+                        starburst.remove();
+                    }, 1000);
+                }, i * 200);
+            }
+        }
+        
+        // إضافة تأثيرات التركيز للحقول
+        const formControls = document.querySelectorAll('.form-control');
+        
+        formControls.forEach(control => {
+            control.addEventListener('focus', function() {
+                this.parentElement.classList.add('input-focused');
+            });
+            
+            control.addEventListener('blur', function() {
+                this.parentElement.classList.remove('input-focused');
+            });
+        });
+        
+        // زر التمرير لأعلى
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.remove('opacity-0', 'invisible');
+                scrollToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopButton.classList.remove('opacity-100', 'visible');
+                scrollToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        scrollToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

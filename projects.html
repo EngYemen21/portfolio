@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-i18n-title="projects.title">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع | مطور ويب</title>
+
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;900&family=Space+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <link href="./src/output.css" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+    <!-- CSS الإضافي -->
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/dark-mode.css">
+    <link rel="stylesheet" href="src/css/navbar.css">
+    <link rel="stylesheet" href="src/css/space-effects.css">
+
+    <!-- مكتبات الرسوم المتحركة -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- تنسيقات مخصصة للغة العربية -->
+  
+</head>
+
+<body class="overflow-x-hidden text-white bg-space-primary">
+    <!-- شريط التنقل -->
+    <nav class="space-navbar transparent">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <i class="fas fa-rocket logo-icon"></i>
+                <span class="logo-text" data-i18n="common.nav.home">الرئيسية</span>
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="index.html#home" data-i18n="common.nav.home">الرئيسية</a></li>
+                <li><a href="index.html#about" data-i18n="common.nav.about">نبذة عني</a></li>
+                <li><a href="index.html#skills" data-i18n="common.nav.skills">المهارات</a></li>
+                <li><a href="index.html#experience" data-i18n="common.nav.experience">الخبرات</a></li>
+                <li><a href="projects.html" class="active" data-i18n="common.nav.projects">المشاريع</a></li>
+                <li><a href="contact.html" data-i18n="common.nav.contact">تواصل معي</a></li>
+            </ul>
+
+            <div class="navbar-toggles">
+                <button id="language-toggle" class="toggle-btn" data-lang="en">
+                    <i class="fas fa-language"></i>
+                    <span data-i18n="common.language.en">English</span>
+                </button>
+
+                <button id="theme-toggle" class="toggle-btn">
+                    <i class="fas fa-moon"></i>
+                    <span data-i18n="common.theme.dark">وضع الليل</span>
+                </button>
+            </div>
+
+            <button class="navbar-menu-toggle">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- القائمة المنسدلة للشاشات الصغيرة -->
+    <div class="navbar-mobile-menu">
+        <ul class="navbar-mobile-links">
+            <li><a href="index.html#home" data-i18n="common.nav.home">الرئيسية</a></li>
+            <li><a href="index.html#about" data-i18n="common.nav.about">نبذة عني</a></li>
+            <li><a href="index.html#skills" data-i18n="common.nav.skills">المهارات</a></li>
+            <li><a href="index.html#experience" data-i18n="common.nav.experience">الخبرات</a></li>
+            <li><a href="projects.html" class="active" data-i18n="common.nav.projects">المشاريع</a></li>
+            <li><a href="contact.html" data-i18n="common.nav.contact">تواصل معي</a></li>
+        </ul>
+
+        <div class="navbar-mobile-toggles">
+            <button id="mobile-language-toggle" class="toggle-btn" data-lang="en">
+                <i class="fas fa-language"></i>
+                <span data-i18n="common.language.en">English</span>
+            </button>
+
+            <button id="mobile-theme-toggle" class="toggle-btn">
+                <i class="fas fa-moon"></i>
+                <span data-i18n="common.theme.dark">وضع الليل</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- رأس صفحة المشاريع -->
+    <section class="relative py-20 pt-32 overflow-hidden">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+
+        <!-- كوكب متحرك -->
+        <div
+            class="absolute w-32 h-32 rounded-full top-1/4 right-10 bg-space-accent-1 opacity-30 animate-pulse-slow planet-effect">
+        </div>
+
+        <!-- مجرة متحركة -->
+        <div
+            class="absolute w-64 h-64 rounded-full bottom-1/4 left-10 bg-space-accent-2 opacity-10 animate-spin-slow galaxy-effect">
+        </div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-16 text-center">
+                <h1 class="mb-4 text-4xl font-bold md:text-5xl font-orbitron" data-aos="fade-up"
+                    data-i18n="projects.header.title">معرض المشاريع</h1>
+                <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="projects.header.description">
+                    مجموعة من المشاريع التي قمت بتطويرها باستخدام أحدث التقنيات والأدوات
+                </p>
+            </div>
+
+            <!-- فلتر المشاريع -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="300">
+                <button class="px-4 py-2 text-white project-filter-btn active" data-filter="all"
+                    data-i18n="projects.filtesrs.all">الكل</button>
+                <button class="px-4 py-2 text-white project-filter-btn" data-filter="web"
+                    data-i18n="projects.filtesrs.fullstack">تطوير الويب</button>
+                <button class="px-4 py-2 text-white project-filter-btn" data-filter="mobile"
+                    data-i18n="projects.filtesrs.mobile">تطبيقات الجوال</button>
+                <button class="px-4 py-2 text-white project-filter-btn" data-filter="ui"
+                    data-i18n="projects.filtesrs.ui">واجهة المستخدم</button>
+                <button class="px-4 py-2 text-white project-filter-btn" data-filter="other"
+                    data-i18n="projects.filtesrs.others">أخرى</button>
+            </div>
+
+            <!-- معرض المشاريع -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 mt-6 lg:grid-cols-3">
+                  <!-- مشروع 1 -->
+                  <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                  data-aos-delay="100">
+                  <div class="relative">
+                      <img src="./assets/images/cawash.png" alt="مشروع 1" class="object-fill w-full h-64">
+                      <div class="project-content bg-space-secondary bg-opacity-90">
+                          <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project1.title">موقع حجز غسيل سيارات 
+                          </h3>
+                          <p class="mb-4 text-gray-300" data-i18n="projects.projects.project1.description">تطوير متجر
+                              إلكتروني متكامل باستخدام React و Node.js</p>
+                          <div class="flex flex-wrap gap-2 mb-4">
+                              <span
+                                  class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TailWindCss</span>
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                             
+                              <span
+                                  class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySql</span>
+                          </div>
+                          <div class="flex gap-4">
+                              <a href="http://targetcom.free.nf/?i=1" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                  <i class="mr-1 fas fa-external-link-alt"></i>
+                                  <span data-i18n="projects.projects.project1.links.preview">معاينة</span>
+                              </a>
+                              <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                  <i class="mr-1 fab fa-github"></i>
+                                  <span data-i18n="projects.projects.project.links.code">الكود</span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- مشروع 2 -->
+              <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                  data-aos-delay="200">
+                  <div class="relative">
+                      <img src="./assets/images/him.png"  alt="مشروع 2" class="object-contain w-full h-64">
+                      <div class="project-content bg-space-secondary bg-opacity-90">
+                          <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project2.title">موقع خدمات همالايا الطبية </h3>
+                          <p class="mb-4 text-gray-300" data-i18n="projects.projects.project2.description">هي أحدى الشركات الرائدة والمتخصصة في تنسيق السياحة العلاجية، والاستشارات والتدريب</p>
+                          <div class="flex flex-wrap gap-2 mb-4">
+                              
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">CSS3</span>
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Bootstrap</span>
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySql</span>
+                                  <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                                  <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Filament</span>
+                              
+                          </div>
+                          <div class="flex gap-4">
+                              <a href="https://himsmpc.com/" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                  <i class="mr-1 fas fa-external-link-alt"></i>
+                                  <span data-i18n="projects.projects.project2.links.preview">معاينة</span>
+                              </a>
+                              <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                  <i class="mr-1 fab fa-github"></i>
+                                  <span data-i18n="projects.projects.project2.links.code">الكود</span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- مشروع 3 -->
+              <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                  data-aos-delay="300">
+                  <div class="relative">
+                      <img src="./assets/images/platecar.png" alt="مشروع 3" class="object-contain w-full h-64">
+                      <div class="project-content bg-space-secondary bg-opacity-90">
+                          <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project3.title">منصة لبيع قطع غيار السيارات 
+                          </h3>
+                          <p class="mb-4 text-gray-300" data-i18n="projects.projects.project3.description">
+                              موقع يوفر لك أحدث وأجود قطع غيار السيارات الأصلية بأسعار تنافسية مع ضمان الجودة والتوصيل السريع 
+                            </p>
+                          <div class="flex flex-wrap gap-2 mb-4">
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TailWindCss</span>
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">VueJS</span>
+                              <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySql</span>
+                              <span
+                                  class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                          </div>
+                          <div class="flex gap-4">
+                              <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                  <i class="mr-1 fas fa-external-link-alt"></i>
+                                  <span data-i18n="projects.projects.project3.links.preview">معاينة</span>
+                              </a>
+                              <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                  <i class="mr-1 fab fa-github"></i>
+                                  <span data-i18n="projects.projects.project3.links.code">الكود</span>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+                <!-- مشروع 4 -->
+                <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                    data-aos-delay="400" data-category="web">
+                    <div class="relative">
+                        <img src="./assets/images/storeyem.png"
+                            alt="مشروع 4" class="object-contain w-full h-64">
+                        <div class="project-content bg-space-secondary bg-opacity-90">
+                            <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project4.title"> 
+                            </h3>
+                            <p class="mb-4 text-gray-300" data-i18n="projects.projects.project4.description"> 
+                              </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">HTML</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">CSS</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Reactjs</span>
+                                    <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Api</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://engyemen21.github.io/store-yem/" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fas fa-external-link-alt"></i>
+                                    <span data-i18n="projects.projects.links.preview">معاينة</span>
+                                </a>
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fab fa-github"></i>
+                                    <span data-i18n="projects.projects.links.code">الكود</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مشروع 5 -->
+                <!-- <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                    data-aos-delay="500" data-category="other">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/600x400" alt="مشروع 5" class="object-cover w-full h-64">
+                        <div class="project-content bg-space-secondary bg-opacity-90">
+                            <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project5.title">روبوت ذكاء
+                                اصطناعي للدردشة</h3>
+                            <p class="mb-4 text-gray-300" data-i18n="projects.projects.project5.description">روبوت دردشة
+                                ذكي يعتمد على تقنيات الذكاء الاصطناعي</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Python</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">TensorFlow</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">NLP</span>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fas fa-external-link-alt"></i>
+                                    <span data-i18n="projects.projects.links.preview">معاينة</span>
+                                </a>
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fab fa-github"></i>
+                                    <span data-i18n="projects.projects.links.code">الكود</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- مشروع 6 -->
+                <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
+                    data-aos-delay="600" data-category="mobile">
+                    <div class="relative">
+                        <img src="./assets/images/dash.png" alt="مشروع 6" class="object-contain w-full h-64">
+                        <div class="project-content bg-space-secondary bg-opacity-90">
+                            <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project6.title"> 
+                                </h3>
+                            <p class="mb-4 text-gray-300" data-i18n="projects.projects.project6.description"> 
+                              </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">Laravel</span>
+                                <span
+                                    class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30">MySQL</span>
+                                <!-- <span class="px-2 py-1 text-xs rounded-full bg-space-accent-1 bg-opacity-30"> 
+                                    </span> -->
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fas fa-external-link-alt"></i>
+                                    <span data-i18n="projects.projects.links.preview">معاينة</span>
+                                </a>
+                                <a href="#" class="transition-colors text-space-accent-2 hover:text-space-accent-3">
+                                    <i class="mr-1 fab fa-github"></i>
+                                    <span data-i18n="projects.projects.links.code">الكود</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- زر تحميل المزيد -->
+            <div class="mt-12 text-center" data-aos="fade-up">
+                <button class="btn-primary" data-i18n="projects.load_more">تحميل المزيد</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاتصال السريع -->
+    <section class="relative py-16 overflow-hidden bg-space-secondary">
+        <!-- خلفية الضباب الكوني -->
+        <div class="absolute inset-0 z-0 cosmic-fog"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="mb-8 text-center">
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-i18n="projects.cta.title">هل لديك مشروع في ذهنك؟
+                </h2>
+                <p class="max-w-2xl mx-auto mb-8 text-lg text-gray-300" data-i18n="projects.cta.description">
+                    أنا دائمًا متحمس للعمل على مشاريع جديدة ومثيرة. دعنا نتحدث عن كيفية تحويل فكرتك إلى واقع.
+                </p>
+                <a href="contact.html" class="btn-primary">
+                    <i class="mr-2 fas fa-paper-plane"></i>
+                    <span data-i18n="projects.cta.button">تواصل معي</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="relative py-12 overflow-hidden bg-space-primary">
+        <!-- خلفية النجوم المتحركة -->
+        <div class="absolute inset-0 z-0 stars-container"></div>
+
+        <div class="container relative z-10 px-4 mx-auto">
+            <div class="flex flex-col items-center justify-between md:flex-row">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="flex items-center">
+                        <i class="mr-2 text-2xl fas fa-rocket text-space-accent-2"></i>
+                        <span class="text-xl font-bold font-orbitron" data-i18n="common.footer.name">مطور ويب</span>
+                    </a>
+                    <p class="mt-2 text-gray-400" data-i18n="common.footer.description"> مطور ويب متكامل متخصص في بناء تجارب رقمية استثنائية باستخدام أحدث التقنيات والأدوات.</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-dribbble"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="my-8 border-gray-800">
+            
+            <div class="flex flex-col items-center justify-between md:flex-row">
+                <p class="text-sm text-gray-500" data-i18n="common.footer.copyright">
+                    &copy; <span id="current-year">2025</span> جميع الحقوق محفوظة
+                </p>
+                
+                <div class="flex flex-wrap mt-4 md:mt-0">
+                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.privacy">سياسة الخصوصية</a>
+                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.TermsConditions">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر التمرير لأعلى -->
+    <button id="scroll-to-top"
+        class="fixed z-50 flex items-center justify-center invisible w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 bottom-6 right-6 bg-space-accent-1">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- سكريبتات JavaScript -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/responsive-test.js"></script>
+
+    <script>
+        // تهيئة مكتبة AOS للرسوم المتحركة عند التمرير
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: false
+        });
+
+        // تحديث السنة الحالية في حقوق النشر
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // فلترة المشاريع
+        const filterButtons = document.querySelectorAll('.project-filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                // إزالة الفئة النشطة من جميع الأزرار
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                // إضافة الفئة النشطة للزر المحدد
+                this.classList.add('active');
+
+                // الحصول على فئة الفلتر
+                const filterValue = this.getAttribute('data-filter');
+
+                // فلترة المشاريع
+                projectCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'scale(1)';
+                        }, 100);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // زر التمرير لأعلى
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollToTopButton.classList.remove('opacity-0', 'invisible');
+                scrollToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                scrollToTopButton.classList.remove('opacity-100', 'visible');
+                scrollToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>

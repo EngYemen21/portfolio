@@ -1,0 +1,395 @@
+{
+  "home": {
+    "title": "Portfolio | Web Developer",
+    "hero": {
+      "greeting": "Hello, I'm",
+      "name": "mohamed bader ,",
+      "profession": "Full Stack Web Developer",
+      "description": "Specialized in building exceptional digital experiences",
+      "buttons": {
+        "projects": "My Projects",
+        "contact": "Contact Me",
+        "viewmyworkers": "View My Works",
+        "download": "Download CV"
+      },
+      "status": "Available for hire"
+    },
+    "about": {
+      "title": "About Me",
+      "subtitle": "Full Stack Web Developer with",
+      "download_cv": "download CV",
+      "languages": {
+        "title": "languages",
+        "value": "English , Arabia"
+      },
+      "years": "2 years",
+      "description1": "Full Stack Developer with expertise in end-to-end web application development. Specialized in building responsive, modern web solutions using cutting-edge technologies across both frontend and backend ecosystems.",
+      "description2":  "Committed to continuous skill enhancement through adopting emerging technologies. Focused on delivering pixel-perfect UIs coupled with robust backend architectures, ensuring optimal performance and user satisfaction.",
+      "info": {
+        "name": "Name:",
+        "email": "Email:",
+        "specialization": "Specialization:",
+        "location": "Location:"
+      },
+      "education": {
+        "title": "Education",
+        "value": "Bachelor of Information Technology"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Taiz'z, Yemen"
+      },
+      "experience": {
+        "title": "Experience",
+        "value": "2+ years"
+      },
+      "services": {
+        "frontend": {
+          "title": "Frontend Development",
+          "description": "Developing interactive and attractive user interfaces using HTML, CSS, JavaScript, and modern frameworks."
+        },
+        "backend": {
+          "title": "Backend Development",
+          "description": "Building web services and APIs using Node.js, Express, and MongoDB."
+        },
+        "responsive": {
+          "title": "Responsive Design",
+          "description": "Developing responsive websites that work perfectly on all devices and screens."
+        },
+        "ui": {
+          "title": "UI Design",
+          "description": "Designing attractive and user-friendly interfaces with a focus on user experience."
+        }
+      }
+    },
+    "skills": {
+      "title": "My Skills",
+      "subtitle": "Technical skills and tools I master and use in my projects",
+      "frontend": {
+        "title": "Frontend Development Skills",
+        "items": {
+          "html_css": "HTML5 & CSS3",
+          "javascript": "JavaScript",
+          "react": "React.js",
+          "vue": "Vue.js",
+          "tailwind": "Tailwind CSS"
+        }
+      },
+      "backend": {
+        "title": "Backend Development Skills",
+        "items": {
+          "nodejs": "Node.js",
+          "express": "Express.js",
+          "mongodb": "MongoDB",
+          "sql": "SQL",
+          "rest": "RESTful APIs"
+        }
+      },
+      "tools": {
+        "superTitle": "Tools and Technologies",
+        "title": "Other Tools and Technologies",
+        "items": {
+          "git": "Git",
+          "docker": "Docker",
+          "figma": "Figma",
+          "cicd": "CI/CD",
+          "responsive": "Responsive Design",
+          "accessibility": "Accessibility",
+          "seo": "SEO",
+          "performance": "Performance Optimization"
+        }
+      }
+    },
+    "experience": {
+      "title": "My Experience",
+      "experience_title": "experience Works ",
+      "EducationCertificates_title": "Education and Certificates",
+      "subtitle": "My career path and experience in web development",
+      "jobs": {
+        "job1": {
+          "title": "Full Stack Web Developer",
+          "company": "Freelancing",
+          "period": "2023 - Present",
+          "description": "Developing interactive user interfaces using HTML, CSS, JavaScript, and Vue.js framework.",
+          "achievements": [
+            "Built a comprehensive admin dashboard for website content management",
+            "Improved application performance and implemented multi-device compatible designs",
+            "Developed other platforms such as an auto parts e-commerce site and integrated car wash platform with payment system"
+          ]
+        },
+        "job2": {
+          "title": "Full Stack Web Developer",
+          "company": "Third Eye Company",
+          "period": "2024-1 - 2025-1",
+          "description": "Developing full stack web applications using Tailwind CSS,Bootstrap, Laravel php, and MySQL databases.",
+          "achievements": [
+            "Built a comprehensive admin dashboard for website content management",
+            "Converted Figma designs into responsive interactive user interfaces",
+            "Improved application performance and implemented multi-device compatible designs",
+            "Multilingual support implementation"
+          ]
+        }
+      },
+      "certificates": {
+        "title": "Certifications",
+        "description": "Certificates and training courses I've obtained",
+        "items": {
+          "cert1": {
+            "title": "Mastering Laravel Framework and PHP",
+            "date": "2024",
+            "issuer": "Coursera",
+            "description": "Professional certification in advanced Laravel framework concepts and PHP development, covering MVC architecture, Eloquent ORM, and API development."
+          },
+          "cert2": {
+            "title": "Mastering MySQL Databases",
+            "date": "2024",
+            "issuer": "Coursera",
+            "description": "Professional certification in database management and design using MySQL, covering table design, advanced queries, and performance optimization."
+          },
+          "cert3": {
+            "title": "Secure Coding in Laravel",
+            "date": "2024",
+            "issuer": "Coursera",
+            "description": "Professional certification in Laravel security best practices covering authentication hardening, CSRF protection, SQL injection prevention, and XSS mitigation."
+          }
+        }
+      },
+      "education": {
+        "edu1": {
+          "title": "Bachelor of Information Technology",
+          "date": "2017 - 2024",
+          "institution": "Taiz University",
+          "description": "Specialized in Software Engineering and Application Development. Capstone Project: Freelance Platform Development."
+        },
+      
+       "cert1": {
+            "title": "Mastering Laravel Framework and PHP",
+            "date": "2024",
+            "issuer": "Coursera",
+            "description": "Professional certification in advanced Laravel framework concepts and PHP development, covering MVC architecture, Eloquent ORM, and API development."
+          },
+          "cert2": {
+            "title": "Mastering MySQL Databases",
+            "date": "2024",
+            "issuer": "Coursera",
+            "description": "Professional certification in database management and design using MySQL, covering table design, advanced queries, and performance optimization."
+          },
+          "cert3": {
+            "title": "Secure Coding in Laravel",
+            "date": "2024",
+            "issuer": "Coursera",
+            "description": "Professional certification in Laravel security best practices covering authentication hardening, CSRF protection, SQL injection prevention, and XSS mitigation."
+          }
+      }
+    },
+    "cta": {
+      "title": "Interested in working with me?",
+      "description": "I'm available for new and exciting projects. Let's connect and discuss how I can help achieve your goals.",
+      "button": "Contact Me Now"
+    }
+  },
+  "projects": {
+    "header": {
+      "title": "Projects Portfolio",
+      "description": "A collection of projects I've developed using the latest technologies and tools"
+    },
+    "title": "My Projects",
+    "view_all": "View all Projects",
+    "load_more": "load more",
+    "subtitle": "A collection of projects I've developed using various technologies and tools",
+    "filtesrs": {
+      "all": "All",
+      "frontend": "Frontend",
+      "fullstack": "Full Stack",
+      "mobile": "Mobile Apps",
+      "ui": "UI Design",
+      "others": "others"
+    },
+    "projects": {
+      "project1": {
+        "title": "Car Wash Booking Platform",
+        "description": "An online car wash booking platform. This service enables customers to book washing appointments anytime, with multiple options to suit all needs.",
+        "technologies": [
+          "Laravel",
+          "MySql",
+          "TailWindCSS"
+        ],
+        "links": {
+          "preview": "Preview",
+          "code": "Code"
+        },
+        "category": "fullstack"
+      },
+      "project2": {
+        "title": "Himalaya Medical Services",
+        "description": "A leading company specializing in medical tourism coordination, consultations, and training",
+        "technologies": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "Bootstrap",
+          "Laravel",
+          "MySql"
+        ],
+        "links": {
+          "preview": "Preview",
+          "code": "Code"
+        },
+        "category": "frontend"
+      },
+      "project3": {
+        "title": "Auto Parts E-Commerce Platform",
+        "description": "A platform offering the latest premium genuine auto parts at competitive prices with quality guarantees and fast delivery",
+        "technologies": [
+          "React Native",
+          "Firebase",
+          "Redux"
+        ],
+        "links": {
+          "preview": "Preview",
+          "code": "Code"
+        },
+        "category": "mobile"
+      },
+      "project4": {
+        "title": "E-Display Store",
+        "description": "Digital platform to showcase products and services with complete details",
+        "technologies": [
+          "Figma",
+          "Adobe XD",
+          "UI/UX"
+        ],
+        "links": {
+          "preview": "Preview"
+        },
+        "category": "ui"
+      },
+      "project5": {
+        "title": "E-commerce Platform",
+        "description": "An integrated e-commerce platform with payment system, inventory management, user accounts, and admin dashboard.",
+        "technologies": [
+          "Vue.js",
+          "Node.js",
+          "PostgreSQL",
+          "Stripe"
+        ],
+        "links": {
+          "preview": "Preview",
+          "code": "Code"
+        },
+        "category": "fullstack"
+      },
+      "project6": {
+        "title": "Administrative Dashboard",
+        "description": "An integrated administrative dashboard , user management, .",
+        "technologies": [
+          "React",
+          "Material UI",
+          "Chart.js",
+          "Redux"
+        ],
+        "links": {
+          "preview": "Preview",
+          "code": "Code"
+        },
+        "category": "frontend"
+      }
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "I'm available for new and exciting projects. Let's connect and discuss how I can help achieve your goals.",
+      "button": "Contact Me Now"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "Do you have a project in mind? Or an inquiry? Don't hesitate to get in touch",
+    "info": {
+      "title": "Contact Information",
+      "email": {
+        "title": "Email",
+        "value": "m.bander.it@gmail.com"
+      },
+      "phone": {
+        "title": "Phone Number",
+        "value": "+967 779475324"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Taiz'z, Yemen"
+      },
+      "social": {
+        "title": "Follow Me On",
+        "contactinfo": "contact with me ..."
+      }
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": {
+        "label": "Name",
+        "placeholder": "Enter your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "subject": {
+        "label": "Subject",
+        "placeholder": "Enter message subject"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here..."
+      },
+      "button": "Send Message",
+      "success": "Sent successfully! We'll contact you soon."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What services do you offer?",
+        "answer": "I offer web development services including front-end development, responsive design, and web application development using modern technologies."
+      },
+      "q2": {
+        "question": "How much does a project cost?",
+        "answer": "The cost varies depending on the project type and requirements. I provide custom pricing for each project based on the scope of work and time required. You can contact me for a free quote."
+      },
+      "q3": {
+        "question": "What is the typical project timeline?",
+        "answer": "Project timelines vary based on complexity. Small projects may take 1-2 weeks, while larger applications can take several months. I'll provide a detailed timeline after discussing your requirements."
+      },
+      "q4": {
+        "question": "Do you provide ongoing support after project completion?",
+        "answer": "Yes, I offer different levels of ongoing support and maintenance packages. We can discuss the best option for your needs after project delivery."
+      }
+    }
+  },
+  "common": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "footer": {
+      "name": "mohamed bader",
+      "description": "Full stack web developer specialized in building exceptional digital experiences using the latest technologies and tools.",
+      "quickLinks": "Quick Links",
+      "contactInfo": "Contact Me",
+      "copyright": "© 2025 All Rights Reserved",
+      "backToTop": "Back to Top",
+      "privacy": "Privacy Policy ",
+      "TermsConditions": "Terms and Conditions"
+    },
+    "language": {
+      "ar": "العربية",
+      "en": "English"
+    },
+    "theme": {
+      "light": "Light Mode",
+      "dark": "Dark Mode"
+    }
+  }
+}
