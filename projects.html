@@ -175,7 +175,7 @@
               <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
                   data-aos-delay="200">
                   <div class="relative">
-                      <img src="./assets/images/him.png"  alt="مشروع 2" class="object-contain w-full h-64">
+                      <img src="./assets/images/him.png"  alt="مشروع 2" class="object-fill w-full h-64">
                       <div class="project-content bg-space-secondary bg-opacity-90">
                           <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project2.title">موقع خدمات همالايا الطبية </h3>
                           <p class="mb-4 text-gray-300" data-i18n="projects.projects.project2.description">هي أحدى الشركات الرائدة والمتخصصة في تنسيق السياحة العلاجية، والاستشارات والتدريب</p>
@@ -206,7 +206,7 @@
               <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
                   data-aos-delay="300">
                   <div class="relative">
-                      <img src="./assets/images/platecar.png" alt="مشروع 3" class="object-contain w-full h-64">
+                      <img src="./assets/images/platecar.png" alt="مشروع 3" class="object-fill w-full h-64">
                       <div class="project-content bg-space-secondary bg-opacity-90">
                           <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project3.title">منصة لبيع قطع غيار السيارات 
                           </h3>
@@ -239,7 +239,7 @@
                     data-aos-delay="400" data-category="web">
                     <div class="relative">
                         <img src="./assets/images/storeyem.png"
-                            alt="مشروع 4" class="object-contain w-full h-64">
+                            alt="مشروع 4" class="object-fill w-full h-64">
                         <div class="project-content bg-space-secondary bg-opacity-90">
                             <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project4.title"> 
                             </h3>
@@ -304,7 +304,7 @@
                 <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
                     data-aos-delay="600" data-category="mobile">
                     <div class="relative">
-                        <img src="./assets/images/dash.png" alt="مشروع 6" class="object-contain w-full h-64">
+                        <img src="./assets/images/dash.png" alt="مشروع 6" class="object-fill w-full h-64">
                         <div class="project-content bg-space-secondary bg-opacity-90">
                             <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project6.title"> 
                                 </h3>
@@ -410,10 +410,19 @@
     </footer>
 
     <!-- زر التمرير لأعلى -->
-    <button id="scroll-to-top"
-        class="fixed z-50 flex items-center justify-center invisible w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 bottom-6 right-6 bg-space-accent-1">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <div class="fixed z-50 flex gap-3  flex-col bottom-6 right-6">
+        <!-- زر الواتساب (ثابت ولا يختفي) -->
+        <a href="https://wa.me/967779475324" target="_blank"
+            class="flex items-center justify-center w-16 h-16 text-white transition-all duration-300 rounded-full shadow-lg bg-green-500 hover:bg-green-600">
+            <i class="fab fa-whatsapp text-4xl"></i>
+        </a>
+
+        <!-- زر الانتقال للأعلى (الأصلي لديك) -->
+        <button id="scroll-to-top"
+            class="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 invisible bg-space-accent-1 hover:bg-space-accent-2">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
 
     <!-- سكريبتات JavaScript -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -424,17 +433,9 @@
     <script src="js/navbar.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/responsive-test.js"></script>
-
+    <script src="js/email.js"></script>
     <script>
-        // تهيئة مكتبة AOS للرسوم المتحركة عند التمرير
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: false
-        });
-
-        // تحديث السنة الحالية في حقوق النشر
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+   
 
         // فلترة المشاريع
         const filterButtons = document.querySelectorAll('.project-filter-btn');
@@ -470,25 +471,7 @@
             });
         });
 
-        // زر التمرير لأعلى
-        const scrollToTopButton = document.getElementById('scroll-to-top');
-
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 300) {
-                scrollToTopButton.classList.remove('opacity-0', 'invisible');
-                scrollToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                scrollToTopButton.classList.remove('opacity-100', 'visible');
-                scrollToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-
-        scrollToTopButton.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+       
     </script>
 </body>
 

@@ -24,7 +24,10 @@
     <!-- مكتبات الرسوم المتحركة -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
-    <!-- تنسيقات مخصصة للغة العربية -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('Eus184QcSaVExtG5h');
+    </script>
   
 </head>
 <body class="overflow-x-hidden text-white bg-space-primary">
@@ -200,13 +203,16 @@
                             <span data-i18n="contact.form.success">تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.</span>
                         </div>
                     </div>
+                    <div id="errorMessage" class="hidden mt-4 p-3 bg-red-100 text-red-700 rounded text-center"></div>
 
-                    <form id="contact-form" class="space-y-6">
+
+                    <form id="contact-form"  class="space-y-6">
                         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                             <!-- الاسم -->
                             <div class="form-group">
                                 <input type="text" id="name" name="name" class="form-control" placeholder=" " required>
-                                <label for="name" class="form-label" data-i18n="contact.form.name.placeholder">الاسم</label>
+                                <label for="name" class="form-label"
+                                    data-i18n="contact.form.name.placeholder">الاسم</label>
                             </div>
 
                             <!-- البريد الإلكتروني -->
@@ -222,14 +228,16 @@
                         <div class="form-group">
                             <input type="text" id="subject" name="subject" class="form-control" placeholder=" "
                                 required>
-                            <label for="subject" class="form-label" data-i18n="contact.form.subject.placeholder">الموضوع</label>
+                            <label for="subject" class="form-label"
+                                data-i18n="contact.form.subject.placeholder">الموضوع</label>
                         </div>
 
                         <!-- الرسالة -->
                         <div class="form-group">
                             <textarea id="message" name="message" rows="5" class="form-control" placeholder=" "
                                 required></textarea>
-                            <label for="message" class="form-label" data-i18n="contact.form.message.placeholder">الرسالة</label>
+                            <label for="message" class="form-label"
+                                data-i18n="contact.form.message.placeholder">الرسالة</label>
                         </div>
 
                         <!-- زر الإرسال -->
@@ -300,21 +308,19 @@
                 </div>
                 
                 <div class="flex flex-wrap justify-center gap-6">
-                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <a href="https://github.com/EngYemen21" class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-github"></i>
                     </a>
-                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <a href="https://linkedin.com/in/mohammed-bander" class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-linkedin"></i>
                     </a>
-                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <a href="https://x.com/IT_Bander" class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
-                        <i class="text-xl fab fa-instagram"></i>
+                    <a href="https://wa.me/967779475324" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                        <i class="text-xl fab fa-whatsapp"></i>
                     </a>
-                    <a href="#" class="text-gray-400 transition-colors hover:text-space-accent-2">
-                        <i class="text-xl fab fa-dribbble"></i>
-                    </a>
+                   
                 </div>
             </div>
             
@@ -333,10 +339,19 @@
         </div>
     </footer>
     
-    <!-- زر التمرير لأعلى -->
-    <button id="scroll-to-top" class="fixed z-50 flex items-center justify-center invisible w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 bottom-6 right-6 bg-space-accent-1">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <div class="fixed z-50 flex gap-3  flex-col bottom-6 right-6">
+        <!-- زر الواتساب () -->
+        <a href="https://wa.me/967779475324" target="_blank"
+            class="flex items-center justify-center w-16 h-16 text-white transition-all duration-300 rounded-full shadow-lg bg-green-500 hover:bg-green-600">
+            <i class="fab fa-whatsapp text-4xl"></i>
+        </a>
+
+        <!-- زر الانتقال للأعلى (الأصلي لديك) -->
+        <button id="scroll-to-top"
+            class="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 invisible bg-space-accent-1 hover:bg-space-accent-2">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
     
     <!-- سكريبتات JavaScript -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -347,201 +362,6 @@
     <script src="js/navbar.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/responsive-test.js"></script>
-    
-    <script>
-        // تهيئة مكتبة AOS للرسوم المتحركة عند التمرير
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: false
-        });
-        
-        // تحديث السنة الحالية في حقوق النشر
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // التحقق من صحة نموذج الاتصال
-        const contactForm = document.getElementById('contact-form');
-        const successMessage = document.getElementById('success-message');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                // التحقق من صحة الحقول
-                const name = document.getElementById('name');
-                const email = document.getElementById('email');
-                const subject = document.getElementById('subject');
-                const message = document.getElementById('message');
-                
-                let isValid = true;
-                
-                // التحقق من الاسم
-                if (name.value.trim() === '') {
-                    showError(name, 'الاسم مطلوب');
-                    isValid = false;
-                } else {
-                    clearError(name);
-                }
-                
-                // التحقق من البريد الإلكتروني
-                if (email.value.trim() === '') {
-                    showError(email, 'البريد الإلكتروني مطلوب');
-                    isValid = false;
-                } else if (!isValidEmail(email.value)) {
-                    showError(email, 'يرجى إدخال بريد إلكتروني صحيح');
-                    isValid = false;
-                } else {
-                    clearError(email);
-                }
-                
-                // التحقق من الموضوع
-                if (subject.value.trim() === '') {
-                    showError(subject, 'الموضوع مطلوب');
-                    isValid = false;
-                } else {
-                    clearError(subject);
-                }
-                
-                // التحقق من الرسالة
-                if (message.value.trim() === '') {
-                    showError(message, 'الرسالة مطلوبة');
-                    isValid = false;
-                } else {
-                    clearError(message);
-                }
-                
-                // إذا كانت جميع الحقول صحيحة، أرسل النموذج
-                if (isValid) {
-                    // محاكاة إرسال النموذج
-                    simulateFormSubmission();
-                }
-            });
-        }
-        
-        // التحقق من صحة البريد الإلكتروني
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-        
-        // إظهار رسالة خطأ
-        function showError(input, message) {
-            const formGroup = input.parentElement;
-            let errorElement = formGroup.querySelector('.error-message');
-            
-            input.classList.add('invalid');
-            input.classList.remove('valid');
-            
-            if (!errorElement) {
-                errorElement = document.createElement('div');
-                errorElement.className = 'error-message';
-                formGroup.appendChild(errorElement);
-            }
-            
-            errorElement.textContent = message;
-        }
-        
-        // إزالة رسالة الخطأ
-        function clearError(input) {
-            const formGroup = input.parentElement;
-            const errorElement = formGroup.querySelector('.error-message');
-            
-            input.classList.remove('invalid');
-            input.classList.add('valid');
-            
-            if (errorElement) {
-                errorElement.remove();
-            }
-        }
-        
-        // محاكاة إرسال النموذج
-        function simulateFormSubmission() {
-            // إظهار حالة التحميل
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            
-            submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="mr-2 fas fa-spinner fa-spin"></i><span>جاري الإرسال...</span>';
-            
-            // محاكاة تأخير الشبكة
-            setTimeout(function() {
-                // إعادة تعيين النموذج
-                contactForm.reset();
-                
-                // إظهار رسالة النجاح
-                successMessage.style.display = 'block';
-                
-                // إعادة تعيين زر الإرسال
-                submitButton.disabled = false;
-                submitButton.innerHTML = originalText;
-                
-                // إخفاء رسالة النجاح بعد 5 ثوانٍ
-                setTimeout(function() {
-                    successMessage.style.display = 'none';
-                }, 5000);
-                
-                // تأثير انفجار نجمي للاحتفال
-                createSuccessEffect();
-            }, 1500);
-        }
-        
-        // تأثير انفجار نجمي للاحتفال
-        function createSuccessEffect() {
-            // إنشاء عدة انفجارات نجمية
-            for (let i = 0; i < 5; i++) {
-                setTimeout(function() {
-                    const starburst = document.createElement('div');
-                    starburst.classList.add('starburst-effect');
-                    
-                    // تحديد موقع عشوائي
-                    const x = Math.random() * window.innerWidth;
-                    const y = Math.random() * (window.innerHeight / 2) + window.innerHeight / 4;
-                    
-                    starburst.style.left = `${x}px`;
-                    starburst.style.top = `${y}px`;
-                    
-                    document.body.appendChild(starburst);
-                    
-                    // إزالة العنصر بعد انتهاء التأثير
-                    setTimeout(() => {
-                        starburst.remove();
-                    }, 1000);
-                }, i * 200);
-            }
-        }
-        
-        // إضافة تأثيرات التركيز للحقول
-        const formControls = document.querySelectorAll('.form-control');
-        
-        formControls.forEach(control => {
-            control.addEventListener('focus', function() {
-                this.parentElement.classList.add('input-focused');
-            });
-            
-            control.addEventListener('blur', function() {
-                this.parentElement.classList.remove('input-focused');
-            });
-        });
-        
-        // زر التمرير لأعلى
-        const scrollToTopButton = document.getElementById('scroll-to-top');
-        
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) {
-                scrollToTopButton.classList.remove('opacity-0', 'invisible');
-                scrollToTopButton.classList.add('opacity-100', 'visible');
-            } else {
-                scrollToTopButton.classList.remove('opacity-100', 'visible');
-                scrollToTopButton.classList.add('opacity-0', 'invisible');
-            }
-        });
-        
-        scrollToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    <script src="js/email.js"></script>
 </body>
 </html>

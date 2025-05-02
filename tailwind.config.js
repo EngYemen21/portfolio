@@ -1,7 +1,7 @@
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
-  "./*.html"
+    "./src/**/*.{html,js}"
+  
   ],
   // ... rest of your config
 }
