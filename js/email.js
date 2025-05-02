@@ -76,6 +76,7 @@ function handleSubmit(e) {
   e.preventDefault();
   
   const form = e.target;
+  console.log(form);
   const submitButton = form.querySelector('button[type="submit"]');
   const originalText = submitButton.innerHTML;
 
@@ -261,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupSmoothScrolling();
   initLibraries();
   updateCopyrightYear();
-  setupSkillsAnimation();
+//   setupSkillsAnimation();
   setupContactForm();
  
 });
