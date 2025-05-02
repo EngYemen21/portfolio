@@ -139,8 +139,8 @@ function validateForm(form) {
 
 async function sendFormData(form) {
   // إعداد FormSubmit
-  form.action = 'https://formsubmit.co/m.bander.it@gmail.com';
-  form.method = 'POST';
+//   form.action = 'https://formsubmit.co/m.bander.it@gmail.com';
+//   form.method = 'POST';
   
   // إضافة حقول مخفية
   form.insertAdjacentHTML('beforeend', `
