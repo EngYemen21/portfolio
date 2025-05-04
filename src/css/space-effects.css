@@ -1,1 +1,370 @@
-.cosmic-dust-container,.enhanced-stars-container{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;z-index:0;pointer-events:none}.cosmic-dust{position:absolute;background:radial-gradient(circle,rgba(255,255,255,.8) 0,rgba(255,255,255,0) 70%);border-radius:50%;opacity:.3;animation:20s linear infinite float-dust}@keyframes float-dust{0%{transform:translateY(0) translateX(0);opacity:0}50%{opacity:.3}100%{transform:translateY(-100vh) translateX(100px);opacity:0}}.galaxy-effect{position:absolute;width:300px;height:300px;background:radial-gradient(ellipse at center,rgba(123,31,162,.5) 0,rgba(0,176,255,.3) 40%,rgba(0,0,0,0) 70%);border-radius:50%;filter:blur(20px);opacity:.4;animation:60s linear infinite rotate-galaxy;pointer-events:none;z-index:0}.planet,.shooting-star{position:absolute;z-index:1}@keyframes rotate-galaxy{0%{transform:rotate(0) scale(1)}50%{transform:rotate(180deg) scale(1.2)}100%{transform:rotate(360deg) scale(1)}}.planet{border-radius:50%;box-shadow:inset -25px -15px 40px rgba(0,0,0,.5);background-size:cover;background-position:center;animation:60s linear infinite orbit}.planet-1{width:60px;height:60px;background-image:linear-gradient(to right,#3d5afe,#651fff);animation-duration:120s}.planet-2{width:40px;height:40px;background-image:linear-gradient(to right,#00b0ff,#18ffff);animation-duration:80s}.planet-3{width:30px;height:30px;background-image:linear-gradient(to right,#69f0ae,#76ff03);animation-duration:100s}@keyframes orbit{0%{transform:rotate(0) translateX(150px) rotate(0)}100%{transform:rotate(360deg) translateX(150px) rotate(-360deg)}}.enhanced-star{position:absolute;background-color:#fff;border-radius:50%;animation:4s infinite enhanced-twinkle}.enhanced-star::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;border-radius:50%;box-shadow:0 0 10px 2px #fff;animation:4s infinite enhanced-glow}@keyframes enhanced-twinkle{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.5)}}@keyframes enhanced-glow{0%,100%{opacity:.2;transform:scale(1)}50%{opacity:.8;transform:scale(2)}}.shooting-star{width:2px;height:80px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff);transform:rotate(45deg);animation:3s linear infinite shooting;opacity:0}.card-3d,.section-3d{transform-style:preserve-3d;perspective:1000px}#particles-js,.cosmic-fog{z-index:0;position:absolute;pointer-events:none}@keyframes shooting{0%{transform:translateX(0) translateY(0) rotate(45deg);opacity:1}100%{transform:translateX(300px) translateY(300px) rotate(45deg);opacity:0}}.cosmic-fog{width:100%;height:100%;background:radial-gradient(ellipse at 10% 30%,rgba(123,31,162,.2) 0,rgba(0,0,0,0) 50%),radial-gradient(ellipse at 90% 70%,rgba(0,176,255,.2) 0,rgba(0,0,0,0) 50%),radial-gradient(ellipse at 50% 50%,rgba(105,240,174,.1) 0,rgba(0,0,0,0) 70%);opacity:.5;filter:blur(30px)}.language-transition{animation:.5s language-fade}@keyframes language-fade{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.98)}}.language-toggle-effect{position:fixed;width:2px;height:2px;border-radius:50%;background-color:var(--space-accent-2);pointer-events:none;z-index:9999;animation:1.5s ease-out forwards language-starburst}@keyframes language-starburst{0%{transform:scale(1);opacity:1;box-shadow:0 0 0 0 var(--space-accent-2)}100%{transform:scale(100);opacity:0;box-shadow:0 0 50px 20px rgba(0,176,255,0)}}.animate-on-language-change{opacity:0;animation:.5s forwards fadeInTranslation}@keyframes fadeInTranslation{0%{opacity:0;transform:translateY(10px)}100%{opacity:1;transform:translateY(0)}}.typing-effect::after{content:'|';animation:1s infinite blink}@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}.card-3d{transition:transform .5s,box-shadow .5s,background-image .5s;background-position:center;background-size:200% 200%}.card-3d:hover{box-shadow:0 15px 30px rgba(0,0,0,.3)}.section-3d{transition:transform .5s,opacity .5s}#particles-js{width:100%;height:100%;top:0;left:0}.hologram-effect{position:relative;overflow:hidden}.hologram-effect::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:linear-gradient(to bottom,transparent 0,rgba(0,176,255,.1) 50%,transparent 100%);animation:3s linear infinite hologram-scan;transform:rotate(30deg);pointer-events:none}@keyframes hologram-scan{0%{transform:translateY(-100%) rotate(30deg)}100%{transform:translateY(100%) rotate(30deg)}}.glowing-border{position:relative;border:1px solid var(--space-border);box-shadow:0 0 10px var(--space-border);animation:3s infinite pulse-border}@keyframes pulse-border{0%,100%{box-shadow:0 0 10px var(--space-border)}50%{box-shadow:0 0 20px var(--space-border),0 0 30px var(--space-accent-2)}}.wave-background{position:absolute;width:100%;height:100%;background:linear-gradient(45deg,var(--space-primary),var(--space-secondary));opacity:.3;animation:10s infinite wave;z-index:-1}@keyframes wave{0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%}25%{border-radius:30% 60% 70% 40%/50% 60% 30%}50%{border-radius:50% 60% 30% 40%/40% 30% 70% 60%}75%{border-radius:40% 60% 70% 30%/60% 40% 30% 70%}}.dark-mode .cosmic-dust{background:radial-gradient(circle,rgba(24,255,255,.8) 0,rgba(24,255,255,0) 70%)}.dark-mode .galaxy-effect{background:radial-gradient(ellipse at center,rgba(156,39,176,.5) 0,rgba(24,255,255,.3) 40%,rgba(0,0,0,0) 70%)}.dark-mode .planet-1{background-image:linear-gradient(to right,#304ffe,#a0f)}.dark-mode .planet-2{background-image:linear-gradient(to right,#18ffff,#00e5ff)}.dark-mode .planet-3{background-image:linear-gradient(to right,#76ff03,#64dd17)}.dark-mode .enhanced-star::after{box-shadow:0 0 10px 2px var(--space-accent-2)}.dark-mode .cosmic-fog{background:radial-gradient(ellipse at 10% 30%,rgba(156,39,176,.2) 0,rgba(0,0,0,0) 50%),radial-gradient(ellipse at 90% 70%,rgba(24,255,255,.2) 0,rgba(0,0,0,0) 50%),radial-gradient(ellipse at 50% 50%,rgba(118,255,3,.1) 0,rgba(0,0,0,0) 70%)}.dark-mode .hologram-effect::before{background:linear-gradient(to bottom,transparent 0,rgba(24,255,255,.1) 50%,transparent 100%)}.dark-mode .glowing-border{border:1px solid var(--space-border);box-shadow:0 0 10px var(--space-border);animation:3s infinite dark-pulse-border}@keyframes dark-pulse-border{0%,100%{box-shadow:0 0 10px var(--space-border)}50%{box-shadow:0 0 20px var(--space-border),0 0 30px var(--space-accent-2)}}.dark-mode .wave-background{background:linear-gradient(45deg,var(--space-primary),var(--space-secondary))}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ===== تأثير الجزيئات الكونية ===== */
+.cosmic-dust-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cosmic-dust {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  opacity: 0.3;
+  animation: float-dust 20s linear infinite;
+}
+
+@keyframes float-dust {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  50% { opacity: 0.3; }
+  100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+}
+
+/* ===== تأثير المجرة المتحركة ===== */
+.galaxy-effect {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(ellipse at center, 
+    rgba(123, 31, 162, 0.5) 0%, 
+    rgba(0, 176, 255, 0.3) 40%, 
+    rgba(0, 0, 0, 0) 70%);
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.4;
+  animation: rotate-galaxy 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes rotate-galaxy {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* ===== تأثير الكواكب المتحركة ===== */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset -25px -15px 40px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  animation: orbit 60s linear infinite;
+  z-index: 1;
+}
+
+.planet-1 {
+  width: 60px;
+  height: 60px;
+  background-image: linear-gradient(to right, #3d5afe, #651fff);
+  animation-duration: 120s;
+}
+
+.planet-2 {
+  width: 40px;
+  height: 40px;
+  background-image: linear-gradient(to right, #00b0ff, #18ffff);
+  animation-duration: 80s;
+}
+
+.planet-3 {
+  width: 30px;
+  height: 30px;
+  background-image: linear-gradient(to right, #69f0ae, #76ff03);
+  animation-duration: 100s;
+}
+
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+/* ===== تأثير النجوم المتلألئة المحسن ===== */
+.enhanced-stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.enhanced-star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: enhanced-twinkle 4s infinite;
+}
+
+.enhanced-star::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 2px white;
+  animation: enhanced-glow 4s infinite;
+}
+
+@keyframes enhanced-twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes enhanced-glow {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(2); }
+}
+
+/* ===== تأثير الشهب ===== */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  transform: rotate(45deg);
+  animation: shooting 3s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0) translateY(0) rotate(45deg); opacity: 1; }
+  100% { transform: translateX(300px) translateY(300px) rotate(45deg); opacity: 0; }
+}
+
+/* ===== تأثير الضباب الكوني ===== */
+.cosmic-fog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 10% 30%, rgba(123, 31, 162, 0.2) 0%, rgba(0, 0, 0, 0) 50%),
+    radial-gradient(ellipse at 90% 70%, rgba(0, 176, 255, 0.2) 0%, rgba(0, 0, 0, 0) 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(105, 240, 174, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+  opacity: 0.5;
+  filter: blur(30px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== تأثير الانتقال بين اللغات ===== */
+.language-transition {
+  animation: language-fade 0.5s ease;
+}
+
+@keyframes language-fade {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.language-toggle-effect {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: var(--space-accent-2);
+  pointer-events: none;
+  z-index: 9999;
+  animation: language-starburst 1.5s ease-out forwards;
+}
+
+@keyframes language-starburst {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 var(--space-accent-2);
+  }
+  100% {
+    transform: scale(100);
+    opacity: 0;
+    box-shadow: 0 0 50px 20px rgba(0, 176, 255, 0);
+  }
+}
+
+.animate-on-language-change {
+  opacity: 0;
+  animation: fadeInTranslation 0.5s ease forwards;
+}
+
+@keyframes fadeInTranslation {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== تأثير الكتابة المتتالية ===== */
+.typing-effect::after {
+  content: '|';
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== تأثير البطاقات ثلاثية الأبعاد ===== */
+.card-3d {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background-image 0.5s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background-position: center;
+  background-size: 200% 200%;
+}
+
+.card-3d:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== تأثير الأقسام ثلاثية الأبعاد ===== */
+.section-3d {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* ===== تأثير الجزيئات المتصلة ===== */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== تأثير الهولوغرام ===== */
+.hologram-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 176, 255, 0.1) 50%,
+    transparent 100%
+  );
+  animation: hologram-scan 3s linear infinite;
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+
+@keyframes hologram-scan {
+  0% { transform: translateY(-100%) rotate(30deg); }
+  100% { transform: translateY(100%) rotate(30deg); }
+}
+
+/* ===== تأثير الحدود المتوهجة ===== */
+.glowing-border {
+  position: relative;
+  border: 1px solid var(--space-border);
+  box-shadow: 0 0 10px var(--space-border);
+  animation: pulse-border 3s infinite;
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 10px var(--space-border); }
+  50% { box-shadow: 0 0 20px var(--space-border), 0 0 30px var(--space-accent-2); }
+}
+
+/* ===== تأثير الخلفية المتموجة ===== */
+.wave-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--space-primary), var(--space-secondary));
+  opacity: 0.3;
+  animation: wave 10s ease infinite;
+  z-index: -1;
+}
+
+@keyframes wave {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 50% 60% 30% 40% / 40% 30% 70% 60%; }
+  75% { border-radius: 40% 60% 70% 30% / 60% 40% 30% 70%; }
+}
+
+/* ===== تأثير الوضع الليلي للتأثيرات البصرية ===== */
+.dark-mode .cosmic-dust {
+  background: radial-gradient(circle, rgba(24, 255, 255, 0.8) 0%, rgba(24, 255, 255, 0) 70%);
+}
+
+.dark-mode .galaxy-effect {
+  background: radial-gradient(ellipse at center, 
+    rgba(156, 39, 176, 0.5) 0%, 
+    rgba(24, 255, 255, 0.3) 40%, 
+    rgba(0, 0, 0, 0) 70%);
+}
+
+.dark-mode .planet-1 {
+  background-image: linear-gradient(to right, #304ffe, #aa00ff);
+}
+
+.dark-mode .planet-2 {
+  background-image: linear-gradient(to right, #18ffff, #00e5ff);
+}
+
+.dark-mode .planet-3 {
+  background-image: linear-gradient(to right, #76ff03, #64dd17);
+}
+
+.dark-mode .enhanced-star::after {
+  box-shadow: 0 0 10px 2px var(--space-accent-2);
+}
+
+.dark-mode .cosmic-fog {
+  background: 
+    radial-gradient(ellipse at 10% 30%, rgba(156, 39, 176, 0.2) 0%, rgba(0, 0, 0, 0) 50%),
+    radial-gradient(ellipse at 90% 70%, rgba(24, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(118, 255, 3, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.dark-mode .hologram-effect::before {
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(24, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+}
+
+.dark-mode .glowing-border {
+  border: 1px solid var(--space-border);
+  box-shadow: 0 0 10px var(--space-border);
+}
+
+@keyframes dark-pulse-border {
+  0%, 100% { box-shadow: 0 0 10px var(--space-border); }
+  50% { box-shadow: 0 0 20px var(--space-border), 0 0 30px var(--space-accent-2); }
+}
+
+.dark-mode .glowing-border {
+  animation: dark-pulse-border 3s infinite;
+}
+
+.dark-mode .wave-background {
+  background: linear-gradient(45deg, var(--space-primary), var(--space-secondary));
+}
