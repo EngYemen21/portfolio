@@ -2,34 +2,46 @@
 <html lang="ar" dir="rtl" data-i18n-title="home.title">
 
 <head>
-    <meta charset="UTF-8">
+        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مطور ويب | السيرة الذاتية</title>
+    <meta name="description" content="مطور ويب يقدم مشاريع مبتكرة واحترافية. استعرض أعمالي وتواصل معي.">
+    <meta name="keywords" content="مطور ويب, مشاريع, تصميم, تطوير, تكنولوجيا">
+    <meta name="author" content="mohammed bander ">
+    <meta name="robots" content="index, follow">
+    <title>المشاريع | مطور ويب</title>
 
     <!-- الخطوط -->
+
+    <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;900&family=Space+Mono&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link href="./src/output.css" rel="stylesheet">
-    <link href="./dist/output.css" rel="stylesheet">
+    
+  
+    <!-- CSS الإضافي -->
+    <link  rel="preload"  href="src/css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload"  rel="stylesheet" href="src/css/navbar.css" as="style" onload="this.rel='stylesheet'">
+    
+    <link rel="stylesheet" href="src/css/dark-mode.css">
+    <link rel="stylesheet" href="src/css/space-effects.css">
+    <link rel="stylesheet" href="./js/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
 
-    <link rel="stylesheet" href="./src/css/styles.css">
-    <link rel="stylesheet" href="./src/css/dark-mode.css">
-    <link rel="stylesheet" href="./src/css/navbar.css">
-    <link rel="stylesheet" href="./src/css/space-effects.css">
-    <!-- مكتبات الرسوم المتحركة -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
+    <!-- Tailwind CSS --> 
+    <link href="./src/output.css" rel="stylesheet">
+    <link  href="./dist/output.css" rel="stylesheet">
+
+    <script defer>
         emailjs.init('Eus184QcSaVExtG5h');
     </script>
- 
 </head>
 
 <body class="overflow-x-hidden text-white bg-space-primary">
@@ -42,7 +54,7 @@
             </a>
 
             <ul class="navbar-links">
-                <li><a href="#home" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
+                <li><a href="#home"  rel="canonical" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
                 <li><a href="#about" data-i18n="common.nav.about">نبذة عني</a></li>
                 <li><a href="#skills" data-i18n="common.nav.skills">المهارات</a></li>
                 <li><a href="#experience" data-i18n="common.nav.experience">الخبرات</a></li>
@@ -76,7 +88,7 @@
     <!-- القائمة المنسدلة للشاشات الصغيرة -->
     <div class="navbar-mobile-menu">
         <ul class="navbar-mobile-links">
-            <li><a href="#home" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
+            <li><a href="#home"  rel="canonical" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
             <li><a href="#about" data-i18n="common.nav.about">نبذة عني</a></li>
             <li><a href="#skills" data-i18n="common.nav.skills">المهارات</a></li>
             <li><a href="#experience" data-i18n="common.nav.experience">الخبرات</a></li>
@@ -115,9 +127,9 @@
         <div class="container relative z-10 px-4 py-20 mx-auto">
             <div class="flex flex-col-reverse items-center justify-between md:flex-row">
                 <div class="mt-10 hero-content md:mt-0 md:w-1/2">
-                    <h1 class="mb-4 text-4xl font-bold md:text-5xl lg:text-6xl font-orbitron" data-aos="fade-up"
+                    <h1 class="mb-4 text-3xl font-bold md:text-4xl  font-orbitron" data-aos="fade-up"
                         data-i18n="home.hero.greeting">مرحباً، أنا</h1>
-                    <h2 class="mb-6 text-3xl font-bold md:text-4xl lg:text-5xl font-orbitron text-space-accent-2"
+                    <h2 class="mb-6 text-3xl font-bold md:text-4xl font-orbitron text-space-accent-2"
                         data-aos="fade-up" data-aos-delay="100" data-i18n="home.hero.name"> محمد بندر</h2>
                     <p class="mb-6 text-xl font-medium md:text-2xl" data-aos="fade-up" data-aos-delay="200"
                         data-i18n="home.hero.profession">مطور ويب متكامل</p>
@@ -157,7 +169,8 @@
                 </div>
 
                 <div class="hero-image" data-aos="zoom-in">
-                    <img src="./assets/images/me.jpg" alt="صورة شخصية" class="object-cover w-64 h-64 md:w-80 md:h-80">
+                    <img src="./assets/images/me.webp" loading="lazy" type="image/webp" decoding="async"
+                        alt="صورة شخصية" class="object-cover w-64 h-64 md:w-80 md:h-80">
                 </div>
             </div>
         </div>
@@ -181,8 +194,8 @@
             <div class="flex flex-col items-center gap-12 md:flex-row">
                 <div class="md:w-2/5" data-aos="fade-right">
                     <div class="relative">
-                        <img src="./assets/images/me.jpg" alt="صورة شخصية"
-                            class="w-full max-w-md mx-auto rounded-lg shadow-xl">
+                        <img src="./assets/images/me.webp" loading="lazy" type="image/webp" decoding="async"
+                            alt="صورة شخصية" class="w-full max-w-md mx-auto rounded-lg shadow-xl">
                         <div
                             class="absolute w-24 h-24 rounded-full -top-4 -right-4 bg-space-accent-1 opacity-20 animate-pulse-slow">
                         </div>
@@ -802,7 +815,8 @@
                 <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
                     data-aos-delay="100">
                     <div class="relative">
-                        <img src="./assets/images/cawash.png" alt="مشروع 1" class="object-fill w-full h-64">
+                        <img src="./assets/images/cawash.webp" loading="lazy" type="image/webp" decoding="async"
+                            alt="موقع حجز لغسيل سيارات اونلاين" class="object-fill w-full h-64">
                         <div class="project-content bg-space-secondary bg-opacity-90">
                             <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project1.title">موقع حجز
                                 غسيل سيارات
@@ -837,7 +851,8 @@
                 <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
                     data-aos-delay="200">
                     <div class="relative">
-                        <img src="./assets/images/him.png" alt="مشروع 2" class="object-fill w-full h-64">
+                        <img src="./assets/images/him.webp" loading="lazy" type="image/webp" decoding="async"
+                            alt="موقع خدمات الطبية" class="object-fill w-full h-64">
                         <div class="project-content bg-space-secondary bg-opacity-90">
                             <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project2.title">موقع خدمات
                                 همالايا الطبية </h3>
@@ -875,7 +890,8 @@
                 <div class="overflow-hidden rounded-lg shadow-lg project-card card-3d" data-aos="zoom-in"
                     data-aos-delay="300">
                     <div class="relative">
-                        <img src="./assets/images/platecar.png" alt="مشروع 3" class="object-fill w-full h-64">
+                        <img src="./assets/images/platecar.webp" loading="lazy" type="image/webp" decoding="async"
+                            alt="موقع بيع قطع غيار السيارات" class="object-fill w-full h-64">
                         <div class="project-content bg-space-secondary bg-opacity-90">
                             <h3 class="mb-2 text-xl font-bold" data-i18n="projects.projects.project3.title">منصة لبيع
                                 قطع غيار السيارات
@@ -1109,9 +1125,10 @@
                             <span data-i18n="contact.form.success">تم إرسال رسالتك بنجاح! سأتواصل معك قريبًا.</span>
                         </div>
                     </div>
-                    <div id="errorMessage"class="hidden mt-4 p-3 bg-red-100 text-red-700 rounded text-center"></div>
+                    <div id="errorMessage" class="hidden mt-4 p-3 bg-red-100 text-red-700 rounded text-center"></div>
 
-                    <form id="contact-form"  action="https://formsubmit.co/m.bander.it@gmail.com" method="POST"   class="space-y-6">
+                    <form id="contact-form" action="https://formsubmit.co/m.bander.it@gmail.com" method="POST"
+                        class="space-y-6">
                         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                             <!-- الاسم -->
                             <div class="form-group">
@@ -1153,7 +1170,7 @@
                             </button>
                         </div>
                     </form>
-                   
+
                 </div>
             </div>
         </div>
@@ -1229,17 +1246,18 @@
     </div>
 
     <!-- سكريبتات JavaScript -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/dark-mode.js"></script>
-    <script src="js/language-switcher.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/responsive-test.js"></script>
-    <script src="js/email.js"></script>
+    
+    <script src="js/main.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/dark-mode.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
+    <script src="js/dist/aos.js" defer></script>
+    <!-- <script src="js/animations.js" defer></script> -->
+    <!-- <script src="js/responsive-test.js" defer></script> -->
+    <script src="js/email.js" defer></script>
 
-   
+ 
+
 </body>
 
 </html>
