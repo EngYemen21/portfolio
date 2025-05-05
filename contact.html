@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl" data-i18n-title="contact.title">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <meta name="author" content="mohammed ">
     <meta name="robots" content="index, follow">
     <title>تواصل معي | مطور ويب</title>
-    
+
     <!-- الخطوط -->
     <!-- Preconnect for External Resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,24 +23,25 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    
-  
-    <!-- CSS الإضافي -->
- 
-    <link rel="stylesheet" href="src/css/styles.css" >
-    <link rel="stylesheet" href="src/css/navbar.css" >
-    <link rel="stylesheet" href="src/output.css" >
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="preload" href="src/css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="src/css/navbar.css" as="style" onload="this.rel='stylesheet'">
+    <!-- tailwindcss output -->
+    <link rel="preload" href="src/output.css" as="style" onload="this.rel='stylesheet'">
+    <!--build  -->
+    <link rel="preload" href="dist/output.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="src/css/dark-mode.css">
     <link rel="stylesheet" href="src/css/space-effects.css">
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.js" />
-   
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script defer>
-        emailjs.init('Eus184QcSaVExtG5h');
+        window.addEventListener('load', function () {
+            emailjs.init('Eus184QcSaVExtG5h');
+        });
     </script>
-  
+
 </head>
+
 <body class="overflow-x-hidden text-white bg-space-primary">
     <!-- شريط التنقل -->
     <nav class="space-navbar transparent">
@@ -48,28 +50,28 @@
                 <i class="fas fa-rocket logo-icon"></i>
                 <span class="logo-text" data-i18n="common.nav.home">الرئيسية</span>
             </a>
-            
+
             <ul class="navbar-links">
-                <li><a href="index.html#home"  rel="canonical" data-i18n="common.nav.home">الرئيسية</a></li>
+                <li><a href="index.html#home" rel="canonical" data-i18n="common.nav.home">الرئيسية</a></li>
                 <li><a href="index.html#about" data-i18n="common.nav.about">نبذة عني</a></li>
                 <li><a href="index.html#skills" data-i18n="common.nav.skills">المهارات</a></li>
                 <li><a href="index.html#experience" data-i18n="common.nav.experience">الخبرات</a></li>
                 <li><a href="projects.html" data-i18n="common.nav.projects">المشاريع</a></li>
                 <li><a href="contact.html" class="active" data-i18n="common.nav.contact">تواصل معي</a></li>
             </ul>
-            
+
             <div class="navbar-toggles">
                 <button id="language-toggle" class="toggle-btn" data-lang="en">
                     <i class="fas fa-language"></i>
                     <span data-i18n="common.language.en">English</span>
                 </button>
-                
+
                 <button id="theme-toggle" class="toggle-btn">
                     <i class="fas fa-moon"></i>
                     <span data-i18n="common.theme.dark">وضع الليل</span>
                 </button>
             </div>
-            
+
             <button class="navbar-menu-toggle">
                 <div class="hamburger">
                     <span></span>
@@ -80,52 +82,58 @@
             </button>
         </div>
     </nav>
-    
+
     <!-- القائمة المنسدلة للشاشات الصغيرة -->
     <div class="navbar-mobile-menu">
         <ul class="navbar-mobile-links">
-            <li><a href="index.html#home"  rel="canonical" data-i18n="common.nav.home">الرئيسية</a></li>
+            <li><a href="index.html#home" rel="canonical" data-i18n="common.nav.home">الرئيسية</a></li>
             <li><a href="index.html#about" data-i18n="common.nav.about">نبذة عني</a></li>
             <li><a href="index.html#skills" data-i18n="common.nav.skills">المهارات</a></li>
             <li><a href="index.html#experience" data-i18n="common.nav.experience">الخبرات</a></li>
             <li><a href="projects.html" data-i18n="common.nav.projects">المشاريع</a></li>
             <li><a href="contact.html" class="active" data-i18n="common.nav.contact">تواصل معي</a></li>
         </ul>
-        
+
         <div class="navbar-mobile-toggles">
             <button id="mobile-language-toggle" class="toggle-btn" data-lang="en">
                 <i class="fas fa-language"></i>
                 <span data-i18n="common.language.en">English</span>
             </button>
-            
+
             <button id="mobile-theme-toggle" class="toggle-btn">
                 <i class="fas fa-moon"></i>
                 <span data-i18n="common.theme.dark">وضع الليل</span>
             </button>
         </div>
     </div>
-    
+
     <!-- رأس صفحة التواصل -->
     <section class="relative py-20 pt-32 overflow-hidden">
         <!-- خلفية النجوم المتحركة -->
         <div class="absolute inset-0 z-0 stars-container"></div>
-        
+
         <!-- كوكب متحرك -->
-        <div class="absolute w-32 h-32 rounded-full top-1/4 right-10 bg-space-accent-1 opacity-30 animate-pulse-slow planet-effect"></div>
-        
+        <div
+            class="absolute w-32 h-32 rounded-full top-1/4 right-10 bg-space-accent-1 opacity-30 animate-pulse-slow planet-effect">
+        </div>
+
         <!-- مجرة متحركة -->
-        <div class="absolute w-64 h-64 rounded-full bottom-1/4 left-10 bg-space-accent-2 opacity-10 animate-spin-slow galaxy-effect"></div>
-        
+        <div
+            class="absolute w-64 h-64 rounded-full bottom-1/4 left-10 bg-space-accent-2 opacity-10 animate-spin-slow galaxy-effect">
+        </div>
+
         <div class="container relative z-10 px-4 mx-auto">
             <div class="mb-16 mt-10 text-center">
-                <h1 class="mb-4 text-4xl font-bold md:text-4xl font-orbitron" data-aos="fade-up" data-i18n="contact.title">تواصل معي</h1>
+                <h1 class="mb-4 text-4xl font-bold md:text-4xl font-orbitron" data-aos="fade-up"
+                    data-i18n="contact.title">تواصل معي</h1>
                 <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
-                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200" data-i18n="contact.subtitle">
+                <p class="max-w-2xl mx-auto mt-6 text-lg text-gray-300" data-aos="fade-up" data-aos-delay="200"
+                    data-i18n="contact.subtitle">
                     هل لديك مشروع في ذهنك؟ أو استفسار؟ أنا هنا للإجابة على جميع أسئلتك ومساعدتك في تحقيق أهدافك.
                 </p>
             </div>
-            
-          
+
+
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
                 <!-- معلومات التواصل -->
                 <div data-aos="fade-right">
@@ -169,15 +177,16 @@
                             </div>
                             <div>
                                 <h4 class="mb-1 text-lg font-medium" data-i18n="contact.info.location.title">الموقع</h4>
-                                <p class="text-gray-300" data-i18n="contact.info.location.value">اليمن - تعز  
-                                    </p>
+                                <p class="text-gray-300" data-i18n="contact.info.location.value">اليمن - تعز
+                                </p>
                             </div>
                         </div>
                     </div>
 
                     <!-- وسائل التواصل الاجتماعي -->
                     <div class="mt-8">
-                        <h4 class="mb-4 text-xl font-medium" data-i18n="contact.info.social.contactinfo">تواصل معي على</h4>
+                        <h4 class="mb-4 text-xl font-medium" data-i18n="contact.info.social.contactinfo">تواصل معي على
+                        </h4>
                         <div class="flex flex-wrap gap-4">
                             <a href="#"
                                 class="flex items-center justify-center w-12 h-12 border rounded-full bg-space-secondary bg-opacity-30 border-space-border border-opacity-30 social-icon">
@@ -216,7 +225,8 @@
                     <div id="errorMessage" class="hidden mt-4 p-3 bg-red-100 text-red-700 rounded text-center"></div>
 
 
-                    <form id="contact-form" action="https://formsubmit.co/m.bander.it@gmail.com" method="POST"  class="space-y-6">
+                    <form id="contact-form" action="https://formsubmit.co/m.bander.it@gmail.com" method="POST"
+                        class="space-y-6">
                         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                             <!-- الاسم -->
                             <div class="form-group">
@@ -262,51 +272,65 @@
             </div>
         </div>
     </section>
-    
+
     <!-- قسم الأسئلة الشائعة -->
     <section class="relative py-16 overflow-hidden bg-space-secondary">
         <!-- خلفية الضباب الكوني -->
         <div class="absolute inset-0 z-0 cosmic-fog"></div>
-        
+
         <div class="container relative z-10 px-4 mx-auto">
             <div class="mb-12 text-center">
-                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="contact.faq.title">الأسئلة الشائعة</h2>
+                <h2 class="mb-4 text-3xl font-bold font-orbitron" data-aos="fade-up" data-i18n="contact.faq.title">
+                    الأسئلة الشائعة</h2>
                 <div class="w-24 h-1 mx-auto rounded-full bg-accent-gradient"></div>
             </div>
-            
+
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                 <!-- سؤال 1 -->
-                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105"
+                    data-aos="fade-up" data-aos-delay="100">
                     <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q1.question">ما هي خدماتك؟</h3>
-                    <p class="text-gray-300" data-i18n="contact.faq.q1.answer">أقدم خدمات تطوير الويب المتكاملة، بما في ذلك تصميم وتطوير المواقع والتطبيقات، وتحسين تجربة المستخدم، وتطوير واجهات المستخدم التفاعلية، وتطوير الواجهات الخلفية.</p>
+                    <p class="text-gray-300" data-i18n="contact.faq.q1.answer">أقدم خدمات تطوير الويب المتكاملة، بما في
+                        ذلك تصميم وتطوير المواقع والتطبيقات، وتحسين تجربة المستخدم، وتطوير واجهات المستخدم التفاعلية،
+                        وتطوير الواجهات الخلفية.</p>
                 </div>
-                
+
                 <!-- سؤال 2 -->
-                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105"
+                    data-aos="fade-up" data-aos-delay="200">
                     <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q2.question">كم تكلفة المشروع؟</h3>
-                    <p class="text-gray-300" data-i18n="contact.faq.q2.answer">تختلف التكلفة حسب نوع المشروع ومتطلباته. أقدم تسعيرًا مخصصًا لكل مشروع بناءً على نطاق العمل والوقت المطلوب. يمكنك التواصل معي للحصول على عرض سعر مجاني.</p>
+                    <p class="text-gray-300" data-i18n="contact.faq.q2.answer">تختلف التكلفة حسب نوع المشروع ومتطلباته.
+                        أقدم تسعيرًا مخصصًا لكل مشروع بناءً على نطاق العمل والوقت المطلوب. يمكنك التواصل معي للحصول على
+                        عرض سعر مجاني.</p>
                 </div>
-                
+
                 <!-- سؤال 3 -->
-                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q3.question">كم من الوقت يستغرق تنفيذ المشروع؟</h3>
-                    <p class="text-gray-300" data-i18n="contact.faq.q3.answer">يعتمد وقت التنفيذ على تعقيد المشروع وحجمه. عادةً ما تستغرق المواقع البسيطة من أسبوع إلى أسبوعين، بينما قد تستغرق المشاريع الأكثر تعقيدًا من شهر إلى ثلاثة أشهر.</p>
+                <div class="p-6 transition-transform transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q3.question">كم من الوقت يستغرق تنفيذ
+                        المشروع؟</h3>
+                    <p class="text-gray-300" data-i18n="contact.faq.q3.answer">يعتمد وقت التنفيذ على تعقيد المشروع
+                        وحجمه. عادةً ما تستغرق المواقع البسيطة من أسبوع إلى أسبوعين، بينما قد تستغرق المشاريع الأكثر
+                        تعقيدًا من شهر إلى ثلاثة أشهر.</p>
                 </div>
-                
+
                 <!-- سؤال 4 -->
-                <div class="p-6 transition-trans transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105" data-aos="fade-up" data-aos-delay="400">
-                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q4.question">هل تقدم خدمات الصيانة بعد إطلاق المشروع؟</h3>
-                    <p class="text-gray-300" data-i18n="contact.faq.q4.answer">نعم، أقدم خدمات الصيانة والدعم الفني بعد إطلاق المشروع. يمكنك الاختيار من بين خطط الصيانة الشهرية أو السنوية حسب احتياجاتك.</p>
+                <div class="p-6 transition-trans transform bg-opacity-50 border rounded-lg bg-space-primary border-space-border border-opacity-30 hover:scale-105"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="mb-3 text-xl font-bold" data-i18n="contact.faq.q4.question">هل تقدم خدمات الصيانة بعد
+                        إطلاق المشروع؟</h3>
+                    <p class="text-gray-300" data-i18n="contact.faq.q4.answer">نعم، أقدم خدمات الصيانة والدعم الفني بعد
+                        إطلاق المشروع. يمكنك الاختيار من بين خطط الصيانة الشهرية أو السنوية حسب احتياجاتك.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- التذييل -->
     <footer class="relative py-12 overflow-hidden bg-space-primary">
         <!-- خلفية النجوم المتحركة -->
         <div class="absolute inset-0 z-0 stars-container"></div>
-        
+
         <div class="container relative z-10 px-4 mx-auto">
             <div class="flex flex-col items-center justify-between md:flex-row">
                 <div class="mb-6 md:mb-0">
@@ -314,41 +338,47 @@
                         <i class="mr-2 text-2xl fas fa-rocket text-space-accent-2"></i>
                         <span class="text-xl font-bold font-orbitron" data-i18n="common.footer.name">مطور ويب</span>
                     </a>
-                    <p class="mt-2 text-gray-400" data-i18n="common.footer.description"> مطور ويب متكامل متخصص في بناء تجارب رقمية استثنائية باستخدام أحدث التقنيات والأدوات.</p>
+                    <p class="mt-2 text-gray-400" data-i18n="common.footer.description"> مطور ويب متكامل متخصص في بناء
+                        تجارب رقمية استثنائية باستخدام أحدث التقنيات والأدوات.</p>
                 </div>
-                
+
                 <div class="flex flex-wrap justify-center gap-6">
-                    <a href="https://github.com/EngYemen21" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <a href="https://github.com/EngYemen21"
+                        class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-github"></i>
                     </a>
-                    <a href="https://linkedin.com/in/mohammed-bander" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <a href="https://linkedin.com/in/mohammed-bander"
+                        class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-linkedin"></i>
                     </a>
                     <a href="https://x.com/IT_Bander" class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-twitter"></i>
                     </a>
-                    <a href="https://wa.me/967779475324" class="text-gray-400 transition-colors hover:text-space-accent-2">
+                    <a href="https://wa.me/967779475324"
+                        class="text-gray-400 transition-colors hover:text-space-accent-2">
                         <i class="text-xl fab fa-whatsapp"></i>
                     </a>
-                   
+
                 </div>
             </div>
-            
+
             <hr class="my-8 border-gray-800">
-            
+
             <div class="flex flex-col items-center justify-between md:flex-row">
                 <p class="text-sm text-gray-500" data-i18n="common.footer.copyright">
                     &copy; <span id="current-year">2025</span> جميع الحقوق محفوظة
                 </p>
-                
+
                 <div class="flex flex-wrap mt-4 md:mt-0">
-                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.privacy">سياسة الخصوصية</a>
-                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2" data-i18n="common.footer.TermsConditions">الشروط والأحكام</a>
+                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2"
+                        data-i18n="common.footer.privacy">سياسة الخصوصية</a>
+                    <a href="#" class="mx-2 text-sm text-gray-500 transition-colors hover:text-space-accent-2"
+                        data-i18n="common.footer.TermsConditions">الشروط والأحكام</a>
                 </div>
             </div>
         </div>
     </footer>
-    
+
     <div class="fixed z-50 flex gap-3  flex-col bottom-6 right-6">
         <!-- زر الواتساب () -->
         <a href="https://wa.me/967779475324" target="_blank"
@@ -362,22 +392,14 @@
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
-    
     <!-- سكريبتات JavaScript -->
-    
-
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> -->
     <script src="js/main.js" defer></script>
     <script src="js/navbar.js" defer></script>
     <script src="js/dark-mode.js" defer></script>
-    <!-- <script src="js/dist/aos.js" defer></script> -->
-    <script src="node_modules/aos/dist/aos.js"></script>
+    <script src="node_modules/aos/dist/aos.js" defer></script>
     <script src="js/language-switcher.js" defer></script>
     <script src="js/responsive-test.js" defer></script>
-    <script src="js/email.js"></script>
-       
-    <!-- <script src="js/animations.js"></script> -->
-    <!-- <script src="js/responsive-test.js"></script> -->
+    <script src="js/email.js" defer></script>
 </body>
+
 </html>

@@ -26,19 +26,17 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-
-
-    <!-- CSS الإضافي -->
-    <link rel="stylesheet" href="src/css/styles.css" >
-    <link rel="stylesheet" href="src/css/navbar.css" >
-    <link rel="stylesheet" href="src/output.css" >
-    <link rel="stylesheet" href="dist/output.css">
+    <link rel="preload" href="src/css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="src/css/navbar.css" as="style" onload="this.rel='stylesheet'">
+    <!-- tailwindcss output -->
+    <link rel="preload" href="src/output.css" as="style" onload="this.rel='stylesheet'">
+    <!--build  -->
+    <link rel="preload" href="dist/output.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="src/css/dark-mode.css">
     <link rel="stylesheet" href="src/css/space-effects.css">
-    <link rel="stylesheet" href="node_modules/aos/dist/aos.js" />
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
 
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
 </head>
 
 <body class="overflow-x-hidden text-white bg-space-primary">
@@ -425,17 +423,15 @@
 
     <!-- سكريبتات JavaScript -->
 
-    <script src="js/main.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/dark-mode.js"></script>
-    <script src="js/language-switcher.js"></script>
-
-    <script src="js/responsive-test.js"></script>
-    <script src="node_modules/aos/dist/aos.js"></script>
-    <script src="js/email.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/dark-mode.js" defer></script>
+    <script src="js/language-switcher.js" defer></script>
+    <script src="js/responsive-test.js" defer></script>
+    <script src="node_modules/aos/dist/aos.js" defer></script>
+    <script src="js/animations.js" defer ></script>
+    <script src="js/email.js" defer></script>
     <script>
-
-
         // فلترة المشاريع
         const filterButtons = document.querySelectorAll('.project-filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
@@ -447,7 +443,6 @@
 
                 // إضافة الفئة النشطة للزر المحدد
                 this.classList.add('active');
-
                 // الحصول على فئة الفلتر
                 const filterValue = this.getAttribute('data-filter');
 

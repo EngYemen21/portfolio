@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl" data-i18n-title="home.title">
 
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="مطور ويب يقدم مشاريع مبتكرة واحترافية. استعرض أعمالي وتواصل معي.">
     <meta name="keywords" content="مطور ويب, مشاريع, تصميم, تطوير, تكنولوجيا">
@@ -24,20 +24,24 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    
-       <!-- CSS الإضافي -->
-       <link rel="stylesheet" href="src/css/styles.css" >
-       <link rel="stylesheet" href="src/css/navbar.css" >
-       <link rel="stylesheet" href="src/output.css" >
-       <link rel="stylesheet" href="dist/output.css">
-       <link rel="stylesheet" href="src/css/dark-mode.css">
-       <link rel="stylesheet" href="src/css/space-effects.css">
-       <link rel="stylesheet" href="node_modules/aos/dist/aos.js" />
-   
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="preload" href="src/css/styles.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="src/css/navbar.css" as="style" onload="this.rel='stylesheet'">
+    <!-- tailwindcss output -->
+    <link rel="preload" href="src/output.css" as="style" onload="this.rel='stylesheet'">
+    <!--build  -->
+    <link rel="preload" href="dist/output.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="src/css/dark-mode.css">
+    <link rel="stylesheet" href="src/css/space-effects.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script defer>
-        emailjs.init('Eus184QcSaVExtG5h');
+        window.addEventListener('load', function () {
+            emailjs.init('Eus184QcSaVExtG5h');
+        });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
 </head>
 
 <body class="overflow-x-hidden text-white bg-space-primary">
@@ -50,7 +54,7 @@
             </a>
 
             <ul class="navbar-links">
-                <li><a href="#home"  rel="canonical" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
+                <li><a href="#home" rel="canonical" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
                 <li><a href="#about" data-i18n="common.nav.about">نبذة عني</a></li>
                 <li><a href="#skills" data-i18n="common.nav.skills">المهارات</a></li>
                 <li><a href="#experience" data-i18n="common.nav.experience">الخبرات</a></li>
@@ -84,7 +88,7 @@
     <!-- القائمة المنسدلة للشاشات الصغيرة -->
     <div class="navbar-mobile-menu">
         <ul class="navbar-mobile-links">
-            <li><a href="#home"  rel="canonical" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
+            <li><a href="#home" rel="canonical" class="active" data-i18n="common.nav.home">الرئيسية</a></li>
             <li><a href="#about" data-i18n="common.nav.about">نبذة عني</a></li>
             <li><a href="#skills" data-i18n="common.nav.skills">المهارات</a></li>
             <li><a href="#experience" data-i18n="common.nav.experience">الخبرات</a></li>
@@ -120,13 +124,13 @@
             class="absolute w-64 h-64 rounded-full bottom-1/4 left-10 bg-space-accent-2 opacity-10 animate-spin-slow galaxy-effect">
         </div>
 
-        <div class="container relative z-10 px-4 py-20 mx-auto">
+        <div class="container relative z-10 px-4 py-10 mx-auto">
             <div class="flex flex-col-reverse items-center justify-between md:flex-row">
                 <div class="mt-10 hero-content md:mt-0 md:w-1/2">
-                    <h1 class="mb-4 text-3xl font-bold md:text-4xl  font-orbitron" data-aos="fade-up"
+                    <h1 class="mb-4 text-3xl font-bold md:text-4xl  font-orbitron " data-aos="fade-up"
                         data-i18n="home.hero.greeting">مرحباً، أنا</h1>
-                    <h2 class="mb-6 text-3xl font-bold md:text-4xl font-orbitron text-space-accent-2"
-                        data-aos="fade-up" data-aos-delay="100" data-i18n="home.hero.name"> محمد بندر</h2>
+                    <h2 class="mb-6 text-3xl font-bold md:text-4xl font-orbitron text-space-accent-2" data-aos="fade-up"
+                        data-aos-delay="100" data-i18n="home.hero.name"> محمد بندر</h2>
                     <p class="mb-6 text-xl font-medium md:text-2xl" data-aos="fade-up" data-aos-delay="200"
                         data-i18n="home.hero.profession">مطور ويب متكامل</p>
                     <p class="max-w-lg mb-8 text-gray-300" data-aos="fade-up" data-aos-delay="300"
@@ -165,8 +169,8 @@
                 </div>
 
                 <div class="hero-image" data-aos="zoom-in">
-                    <img src="./assets/images/me.webp" loading="lazy" type="image/webp" decoding="async"
-                        alt="صورة شخصية" class="object-cover w-64 h-64 md:w-80 md:h-80">
+                    <img src="./assets/images/me.avif" type="image/webp" decoding="async" alt="صورة شخصية"
+                        class="object-cover w-60 h-60 md:w-80 md:h-80">
                 </div>
             </div>
         </div>
@@ -190,7 +194,7 @@
             <div class="flex flex-col items-center gap-12 md:flex-row">
                 <div class="md:w-2/5" data-aos="fade-right">
                     <div class="relative">
-                        <img src="./assets/images/me.webp" loading="lazy" type="image/webp" decoding="async"
+                        <img src="./assets/images/me.avif" loading="lazy" type="image/webp" decoding="async"
                             alt="صورة شخصية" class="w-full max-w-md mx-auto rounded-lg shadow-xl">
                         <div
                             class="absolute w-24 h-24 rounded-full -top-4 -right-4 bg-space-accent-1 opacity-20 animate-pulse-slow">
@@ -1210,9 +1214,7 @@
                     </a>
                 </div>
             </div>
-
             <hr class="my-8 border-gray-800">
-
             <div class="flex flex-col items-center justify-between md:flex-row">
                 <p class="text-sm text-gray-500" data-i18n="common.footer.copyright">
                     &copy; <span id="current-year">2025</span> جميع الحقوق محفوظة
@@ -1228,33 +1230,24 @@
         </div>
     </footer>
     <div class="fixed z-50 flex gap-3  flex-col bottom-6 right-6">
-        <!-- زر الواتساب ( ) -->
         <a href="https://wa.me/967779475324" target="_blank"
             class="flex items-center justify-center w-16 h-16 text-white transition-all duration-300 rounded-full shadow-lg bg-green-500 hover:bg-green-600">
             <i class="fab fa-whatsapp text-4xl"></i>
         </a>
-
-        <!-- زر الانتقال للأعلى (الأصلي لديك) -->
         <button id="scroll-to-top"
             class="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 rounded-full shadow-lg opacity-0 invisible bg-space-accent-1 hover:bg-space-accent-2">
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
-
     <!-- سكريبتات JavaScript -->
-    
     <script src="js/main.js" defer></script>
     <script src="js/navbar.js" defer></script>
     <script src="js/dark-mode.js" defer></script>
     <script src="js/language-switcher.js" defer></script>
-    <script src="node_modules/aos/dist/aos.js"></script>
-    <!-- <script src="js/dist/aos.js" defer></script> -->
-    <!-- <script src="js/animations.js" defer></script> -->
+    <script src="node_modules/aos/dist/aos.js" defer></script>
     <script src="js/responsive-test.js" defer></script>
+    <script src="js/animations.js" defer></script>
     <script src="js/email.js" defer></script>
-
- 
-
 </body>
 
 </html>

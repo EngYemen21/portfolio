@@ -3,5 +3,4 @@ module.exports = {
     "./src/**/*.{html,js}"
   
   ],
-  // ... rest of your config
 }
